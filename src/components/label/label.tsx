@@ -18,7 +18,7 @@ export const Label = ({
 }: LabelProps) => {
   return (
     <div
-      className={`bg-purple-400 px-4 py-2 inline text-gray-100 ${width.sp} md:${width.md} rounded-lg text-center ${textSize.sp} md:${textSize.md}`}
+      className={`bg-purple-400 px-4 py-2 inline text-gray-50 ${width.sp} md:${width.md} rounded-lg text-center ${textSize.sp} md:${textSize.md}`}
     >
       {text}
     </div>

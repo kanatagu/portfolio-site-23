@@ -128,7 +128,7 @@ export const DevIcons = ({ type }: DevIconsType) => {
       {renderArray(type).map((item) => (
         <li
           key={item.text}
-          className="text-gray-100 flex flex-col items-center w-20 md:w-28"
+          className="text-black dark:text-gray-100 flex flex-col items-center w-20 md:w-28"
         >
           {item.icon}
           <span className="text-xs pt-2 md:text-lg">{item.text}</span>

@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import { Link } from 'react-scroll'
 import { Header, Footer } from '@/components/navigation'
-import { Button } from '@/components/button'
 import { SectionTitle } from '@/components/title'
 import { Label } from '@/components/label'
 import { DevIcons } from '@/components/icon'
@@ -10,15 +9,16 @@ import { works } from '@/data'
 
 export default function Home() {
   return (
-    <div className="font-main text-gray-50 bg-black min-h-screen">
+    <div className="font-main text-black bg-beige-50 dark:bg-black dark:text-gray-50 min-h-screen">
       <Header />
       <main className="pt-20 px-4 max-w-container mx-auto">
         {/* HERO */}
         <section className="pt-16 md:pt-36" id="home">
-          <h1 className="text-gray-100 text-5xl font-bold tracking-wide md:text-7xl">
+          <h1 className="text-5xl font-bold tracking-wide md:text-7xl dark:text-gray-100">
             Hi, I&apos;m
             <span className="text-purple-100 block md:inline md:pl-2">
-              Kana Taguchi<span className="text-gray-100">.</span>
+              Kana Taguchi
+              <span className="text-black dark:text-gray-100">.</span>
             </span>
           </h1>
           <p className="text-2xl font-semibold pt-10 tracking-wide md:text-4xl">
@@ -30,7 +30,7 @@ export default function Home() {
           </p>
           <div className="pt-12">
             <Link
-              className="btn-square hover:opacity-80"
+              className="inline-block btn-square"
               to="work"
               spy={true}
               smooth={true}
@@ -58,7 +58,7 @@ export default function Home() {
             <div className="mt-16 md:w-[47%] md:mt-0">
               <div>
                 <h3 className="font-bold text-2xl">Story</h3>
-                <p className="mt-4 text-left text-gray-100 md:text-lg md:mt-8">
+                <p className="mt-4 text-left md:text-lg md:mt-8">
                   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
                   Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
                   natoque penatibus et magnis dis parturient montes, nascetur
@@ -89,15 +89,21 @@ export default function Home() {
           <SectionTitle title="MY SKILLS" />
           <div className="flex flex-col gap-11 items-center mt-11 text-center md:items-start md:text-left md:gap-16 md:mt-14">
             <div>
-              <h3 className="font-bold text-xl text-purple-50">Front End</h3>
+              <h3 className="font-bold text-xl text-purple-400 dark:text-purple-50">
+                Front End
+              </h3>
               <DevIcons type="frontEnd" />
             </div>
             <div>
-              <h3 className="font-bold text-xl text-purple-50">Back End</h3>
+              <h3 className="font-bold text-xl text-purple-400 dark:text-purple-50">
+                Back End
+              </h3>
               <DevIcons type="backEnd" />
             </div>
             <div>
-              <h3 className="font-bold text-xl text-purple-50">Tools</h3>
+              <h3 className="font-bold text-xl text-purple-400 dark:text-purple-50">
+                Tools
+              </h3>
               <DevIcons type="tool" />
             </div>
           </div>
@@ -106,7 +112,7 @@ export default function Home() {
         {/* WORK */}
         <section className="mt-32 md:mt-60" id="work">
           <SectionTitle title="WORK" />
-          <div className="text-gray-100 mt-10 md:text-xl md:text-center md:mt-14">
+          <div className="text-black dark:text-gray-100 mt-10 md:text-xl md:text-center md:mt-14">
             Some things I&apos;ve built for companies and personal projects.{' '}
             <br />
             Please click each projects to see more information.
@@ -121,13 +127,15 @@ export default function Home() {
         {/* CONTACT */}
         <section className="pt-32 md:pt-60" id="contact">
           <SectionTitle title="CONTACT" />
-          <p className="text-gray-100 mt-10 md:text-xl md:text-center md:mt-14">
+          <p className="dark:text-gray-100 mt-10 md:text-xl md:text-center md:mt-14">
             I&apos;m currently looking for a new opportunity. <br />
             If you have any questions about me, projects or anything, please
             feel free to contact me.
           </p>
           <div className="text-center mt-12">
-            <Button>GET IN TOUCH</Button>
+            <a href="mailto:kana.vc2341@gmail.com" className="inline-block btn">
+              GET IN TOUCH
+            </a>
           </div>
         </section>
       </main>

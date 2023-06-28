@@ -20,7 +20,7 @@ export const WorkCard = ({ work }: WorkCardProps) => {
       <div
         tabIndex={work.id}
         role="button"
-        className="h-60 w-fit relative rounded-lg cursor-pointer group/item"
+        className="h-60 w-fit relative rounded-lg cursor-pointer group/item bg-purple-500"
         onClick={() => setShowModal(true)}
       >
         <Image
@@ -31,8 +31,8 @@ export const WorkCard = ({ work }: WorkCardProps) => {
           className="object-cover h-full rounded-lg opacity-40 md:opacity-100 group-hover/item:opacity-40"
         ></Image>
         <div className="opacity-100 absolute inset-0 flex flex-col px-8 translate-y-1/4 group-hover/item:opacity-100 group-hover/item:translate-y-1/4 transition-all duration-500 ease-in-out md:opacity-0 md:translate-y-2/4">
-          <h3 className="text-2xl font-bold text-gray-100">{work.title}</h3>
-          <p className="pt-2 text-sm line-clamp-2 text-gray-100 md:text-md">
+          <h3 className="text-2xl font-bold text-gray-50">{work.title}</h3>
+          <p className="pt-2 text-sm line-clamp-2 text-gray-50 md:text-md">
             {work.overview}
           </p>
           <div className="flex gap-4 pt-4">

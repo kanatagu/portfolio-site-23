@@ -5,15 +5,27 @@ import { FiSettings, FiMenu, FiX } from 'react-icons/fi'
 import { MdOutlineLightMode } from 'react-icons/md'
 import { BsTranslate } from 'react-icons/bs'
 import { Link } from 'react-scroll'
+import { ThemeButton } from '@/components/button'
+import { useTheme } from 'next-themes'
 
 export const Header = () => {
   const [isMenuOpen, setMenuIsOpen] = useState(false)
+  const { theme } = useTheme()
 
   return (
-    <header className="fixed z-10 h-20 w-full bg-purple-500 top-0">
+    <header className="fixed z-10 h-20 w-full text-gray-50 bg-purple-50 dark:bg-purple-500 top-0">
       <div className="flex justify-between items-center max-w-container mx-auto w-full h-full px-4">
         <NextLink href="/">
-          <Image src="/images/logo.png" alt="K" width="48" height="48" />
+          <Image
+            src={`${
+              theme === 'dark'
+                ? '/images/logo-dark.png'
+                : '/images/logo-light.png'
+            }`}
+            alt="K"
+            width="48"
+            height="48"
+          />
         </NextLink>
         <button
           onClick={() => setMenuIsOpen(!isMenuOpen)}
@@ -23,14 +35,14 @@ export const Header = () => {
         </button>
 
         <nav
-          className={`flex justify-center bg-purple-500 absolute top-20 transition-all duration-500 h-screen w-full  md:static md:h-full md:justify-end md:items-center ${
+          className={`flex justify-center bg-purple-50 dark:bg-purple-500 absolute top-20 transition-all duration-500 h-screen w-full  md:static md:h-full md:justify-end md:items-center ${
             isMenuOpen ? 'right-0' : '-right-full'
           }`}
         >
           <ul className="flex flex-col gap-14 text-xl font-medium items-center pt-10 md:flex-row  md:justify-end md:pt-0 md:text-lg md:leading-none">
             <li>
               <Link
-                className="cursor-pointer hover:text-purple-50"
+                className="cursor-pointer hover:text-purple-100"
                 to="home"
                 spy={true}
                 smooth={true}
@@ -43,7 +55,7 @@ export const Header = () => {
             </li>
             <li>
               <Link
-                className="cursor-pointer hover:text-purple-50"
+                className="cursor-pointer hover:text-purple-100"
                 to="about"
                 spy={true}
                 smooth={true}
@@ -56,7 +68,7 @@ export const Header = () => {
             </li>
             <li>
               <Link
-                className="cursor-pointer hover:text-purple-50"
+                className="cursor-pointer hover:text-purple-100"
                 to="skills"
                 spy={true}
                 smooth={true}
@@ -69,7 +81,7 @@ export const Header = () => {
             </li>
             <li>
               <Link
-                className="cursor-pointer hover:text-purple-50"
+                className="cursor-pointer hover:text-purple-100"
                 to="work"
                 spy={true}
                 smooth={true}
@@ -82,7 +94,7 @@ export const Header = () => {
             </li>
             <li>
               <Link
-                className="cursor-pointer hover:text-purple-50"
+                className="cursor-pointer hover:text-purple-100"
                 to="contact"
                 spy={true}
                 smooth={true}
@@ -100,9 +112,7 @@ export const Header = () => {
             </li>
             <li className="block md:hidden">
               <div className="flex gap-10">
-                <button>
-                  <MdOutlineLightMode size="32" />
-                </button>
+                <ThemeButton />
                 <button>
                   <BsTranslate size="32" />
                 </button>
