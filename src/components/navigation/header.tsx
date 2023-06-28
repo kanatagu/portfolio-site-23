@@ -2,14 +2,14 @@ import { useState } from 'react'
 import Image from 'next/image'
 import NextLink from 'next/link'
 import { FiSettings, FiMenu, FiX } from 'react-icons/fi'
-import { MdOutlineLightMode } from 'react-icons/md'
 import { BsTranslate } from 'react-icons/bs'
 import { Link } from 'react-scroll'
 import { ThemeButton } from '@/components/button'
 import { useTheme } from 'next-themes'
 
 export const Header = () => {
-  const [isMenuOpen, setMenuIsOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isSettingOpen, setIsSettingOpen] = useState(false)
   const { theme } = useTheme()
 
   return (
@@ -28,7 +28,7 @@ export const Header = () => {
           />
         </NextLink>
         <button
-          onClick={() => setMenuIsOpen(!isMenuOpen)}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="md:hidden"
         >
           {isMenuOpen ? <FiX size="34" /> : <FiMenu size="34" />}
@@ -48,7 +48,7 @@ export const Header = () => {
                 smooth={true}
                 offset={-120}
                 duration={650}
-                onClick={() => setMenuIsOpen(false)}
+                onClick={() => setIsMenuOpen(false)}
               >
                 HOME
               </Link>
@@ -61,7 +61,7 @@ export const Header = () => {
                 smooth={true}
                 offset={-120}
                 duration={650}
-                onClick={() => setMenuIsOpen(false)}
+                onClick={() => setIsMenuOpen(false)}
               >
                 ABOUT
               </Link>
@@ -74,7 +74,7 @@ export const Header = () => {
                 smooth={true}
                 offset={-120}
                 duration={650}
-                onClick={() => setMenuIsOpen(false)}
+                onClick={() => setIsMenuOpen(false)}
               >
                 SKILLS
               </Link>
@@ -87,7 +87,7 @@ export const Header = () => {
                 smooth={true}
                 offset={-120}
                 duration={650}
-                onClick={() => setMenuIsOpen(false)}
+                onClick={() => setIsMenuOpen(false)}
               >
                 WORK
               </Link>
@@ -100,21 +100,34 @@ export const Header = () => {
                 smooth={true}
                 offset={0}
                 duration={650}
-                onClick={() => setMenuIsOpen(false)}
+                onClick={() => setIsMenuOpen(false)}
               >
                 CONTACT
               </Link>
             </li>
-            <li className="hidden md:block">
-              <button>
+            <li className="hidden md:block relative">
+              <button
+                className="hover:text-purple-100"
+                onClick={() => setIsSettingOpen(!isSettingOpen)}
+              >
                 <FiSettings size="24" />
               </button>
+              {isSettingOpen && (
+                <div className="flex justify-center absolute -right-14 -bottom-20 bg-purple-400 dark:bg-purple-50 p-4 rounded-lg shadow h-16">
+                  <div className="flex gap-8">
+                    <ThemeButton dropdownMenu />
+                    <button className="text-4xl hover:opacity-60">
+                      <BsTranslate size="32" />
+                    </button>
+                  </div>
+                </div>
+              )}
             </li>
             <li className="block md:hidden">
               <div className="flex gap-10">
                 <ThemeButton />
-                <button>
-                  <BsTranslate size="32" />
+                <button className="text-4xl hover:text-purple-100">
+                  <BsTranslate />
                 </button>
               </div>
             </li>

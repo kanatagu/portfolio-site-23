@@ -14,17 +14,17 @@ export default function Home() {
       <main className="pt-20 px-4 max-w-container mx-auto">
         {/* HERO */}
         <section className="pt-16 md:pt-36" id="home">
-          <h1 className="text-5xl font-bold tracking-wide md:text-7xl dark:text-gray-100">
+          <h1 className="text-5xl font-bold tracking-wide md:text-7xl">
             Hi, I&apos;m
             <span className="text-purple-100 block md:inline md:pl-2">
               Kana Taguchi
-              <span className="text-black dark:text-gray-100">.</span>
+              <span className="text-black dark:text-gray-50">.</span>
             </span>
           </h1>
-          <p className="text-2xl font-semibold pt-10 tracking-wide md:text-4xl">
+          <p className="text-2xl font-semibold pt-10 tracking-wide md:text-4xl dark:text-gray-100">
             Build web applications and services
           </p>
-          <p className="text-lg pt-6 tracking-wide md:text-2xl">
+          <p className="text-lg pt-6 tracking-wide md:text-2xl dark:text-gray-100">
             I&apos;m a creative web developer, experiences with front-end,
             back-end and design.
           </p>
@@ -112,7 +112,7 @@ export default function Home() {
         {/* WORK */}
         <section className="mt-32 md:mt-60" id="work">
           <SectionTitle title="WORK" />
-          <div className="text-black dark:text-gray-100 mt-10 md:text-xl md:text-center md:mt-14">
+          <div className="mt-10 md:text-xl md:text-center md:mt-14">
             Some things I&apos;ve built for companies and personal projects.{' '}
             <br />
             Please click each projects to see more information.
@@ -127,7 +127,7 @@ export default function Home() {
         {/* CONTACT */}
         <section className="pt-32 md:pt-60" id="contact">
           <SectionTitle title="CONTACT" />
-          <p className="dark:text-gray-100 mt-10 md:text-xl md:text-center md:mt-14">
+          <p className="mt-10 md:text-xl md:text-center md:mt-14">
             I&apos;m currently looking for a new opportunity. <br />
             If you have any questions about me, projects or anything, please
             feel free to contact me.
