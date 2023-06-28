@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 .btn {
-  @apply font-bold shadow-md;
+  @apply font-semibold shadow-md bg-gradient-to-b from-purple-200 to-purple-300 text-xl px-14 tracking-wide py-3 transition duration-300 rounded-3xl cursor-pointer md:text-2xl md:py-4 hover:scale-110;
+}
+
+.btn-square {
+  @apply font-semibold shadow-md bg-gradient-to-b from-purple-200 to-purple-300 text-xl px-10 tracking-wide py-4 transition duration-300  rounded-lg cursor-pointer md:text-xl hover:scale-110;
 }
 
 /* Swiper */
@@ -33,4 +37,8 @@
   .swiper-button-prev {
     @apply hidden;
   }
+}
+
+.navActive {
+  @apply: text-purple-50;
 }

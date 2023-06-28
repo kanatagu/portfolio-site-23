@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
+import NextLink from 'next/link'
 import { FiSettings, FiMenu, FiX } from 'react-icons/fi'
 import { MdOutlineLightMode } from 'react-icons/md'
 import { BsTranslate } from 'react-icons/bs'
+import { Link } from 'react-scroll'
 
 export const Header = () => {
   const [isMenuOpen, setMenuIsOpen] = useState(false)
@@ -11,9 +12,9 @@ export const Header = () => {
   return (
     <header className="fixed z-10 h-20 w-full bg-purple-500 top-0">
       <div className="flex justify-between items-center max-w-container mx-auto w-full h-full px-4">
-        <Link href="/">
+        <NextLink href="/">
           <Image src="/images/logo.png" alt="K" width="48" height="48" />
-        </Link>
+        </NextLink>
         <button
           onClick={() => setMenuIsOpen(!isMenuOpen)}
           className="md:hidden"
@@ -27,11 +28,71 @@ export const Header = () => {
           }`}
         >
           <ul className="flex flex-col gap-14 text-xl font-medium items-center pt-10 md:flex-row  md:justify-end md:pt-0 md:text-lg md:leading-none">
-            <li>HOME</li>
-            <li>ABOUT</li>
-            <li>SKILLS</li>
-            <li>WORK</li>
-            <li>CONTACT</li>
+            <li>
+              <Link
+                className="cursor-pointer hover:text-purple-50"
+                to="home"
+                spy={true}
+                smooth={true}
+                offset={-120}
+                duration={650}
+                onClick={() => setMenuIsOpen(false)}
+              >
+                HOME
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="cursor-pointer hover:text-purple-50"
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-120}
+                duration={650}
+                onClick={() => setMenuIsOpen(false)}
+              >
+                ABOUT
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="cursor-pointer hover:text-purple-50"
+                to="skills"
+                spy={true}
+                smooth={true}
+                offset={-120}
+                duration={650}
+                onClick={() => setMenuIsOpen(false)}
+              >
+                SKILLS
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="cursor-pointer hover:text-purple-50"
+                to="work"
+                spy={true}
+                smooth={true}
+                offset={-120}
+                duration={650}
+                onClick={() => setMenuIsOpen(false)}
+              >
+                WORK
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="cursor-pointer hover:text-purple-50"
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={650}
+                onClick={() => setMenuIsOpen(false)}
+              >
+                CONTACT
+              </Link>
+            </li>
             <li className="hidden md:block">
               <button>
                 <FiSettings size="24" />

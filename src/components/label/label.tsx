@@ -1,20 +1,20 @@
 type LabelProps = {
   text: string
   textSize?: {
-    sp: 'text-xs' | 'text-sm' | 'text-base' | 'text-xl'
-    md: 'text-xs' | 'text-sm' | 'text-base' | 'text-xl'
+    sp: 'text-xs' | 'text-sm' | 'text-base'
+    md: 'text-xs' | 'text-sm' | 'text-base'
   }
   width?: {
     sp: 'w-fit' | 'w-28' | 'w-32'
-    md: 'w-fit' | 'w-28' | 'w-32'
+    md: 'w-fit' | 'w-28' | 'w-36'
   }
   size?: 'xs' | 'sm' | 'md'
 }
 
 export const Label = ({
   text,
-  textSize = { sp: 'text-sm', md: 'text-xl' },
-  width = { sp: 'w-28', md: 'w-32' }
+  textSize = { sp: 'text-sm', md: 'text-base' },
+  width = { sp: 'w-28', md: 'w-36' }
 }: LabelProps) => {
   return (
     <div

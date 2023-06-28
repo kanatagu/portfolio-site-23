@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { Link } from 'react-scroll'
 import { Header, Footer } from '@/components/navigation'
 import { Button } from '@/components/button'
 import { SectionTitle } from '@/components/title'
@@ -13,7 +14,7 @@ export default function Home() {
       <Header />
       <main className="pt-20 px-4 max-w-container mx-auto">
         {/* HERO */}
-        <section className="pt-16 md:pt-36">
+        <section className="pt-16 md:pt-36" id="home">
           <h1 className="text-gray-100 text-5xl font-bold tracking-wide md:text-7xl">
             Hi, I&apos;m
             <span className="text-purple-100 block md:inline md:pl-2">
@@ -28,12 +29,21 @@ export default function Home() {
             back-end and design.
           </p>
           <div className="pt-12">
-            <Button square>VIEW MY WORKS</Button>
+            <Link
+              className="btn-square hover:opacity-80"
+              to="work"
+              spy={true}
+              smooth={true}
+              offset={-120}
+              duration={650}
+            >
+              VIEW MY WORKS
+            </Link>
           </div>
         </section>
 
         {/* ABOUT */}
-        <section className="pt-32 md:pt-60">
+        <section className="mt-32 md:mt-60" id="about">
           <SectionTitle title="ABOUT ME" />
           <div className="flex flex-col items-center mt-11 text-center justify-items-center md:flex-row md:justify-between md:text-left md:mt-14">
             <div className="md:w-[42%]">
@@ -75,7 +85,7 @@ export default function Home() {
         </section>
 
         {/* MY SKILLS */}
-        <section className="pt-32 md:pt-60">
+        <section className="mt-32 md:mt-60" id="skills">
           <SectionTitle title="MY SKILLS" />
           <div className="flex flex-col gap-11 items-center mt-11 text-center md:items-start md:text-left md:gap-16 md:mt-14">
             <div>
@@ -94,7 +104,7 @@ export default function Home() {
         </section>
 
         {/* WORK */}
-        <section className="pt-32 md:pt-60">
+        <section className="mt-32 md:mt-60" id="work">
           <SectionTitle title="WORK" />
           <div className="text-gray-100 mt-10 md:text-xl md:text-center md:mt-14">
             Some things I&apos;ve built for companies and personal projects.{' '}
@@ -108,8 +118,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* WORK */}
-        <section className="pt-32 md:pt-60">
+        {/* CONTACT */}
+        <section className="pt-32 md:pt-60" id="contact">
           <SectionTitle title="CONTACT" />
           <p className="text-gray-100 mt-10 md:text-xl md:text-center md:mt-14">
             I&apos;m currently looking for a new opportunity. <br />
