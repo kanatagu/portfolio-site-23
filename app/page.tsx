@@ -1,11 +1,12 @@
+'use client'
 import Image from 'next/image'
 import { Link } from 'react-scroll'
-import { Header, Footer } from '@/components/navigation'
-import { SectionTitle } from '@/components/title'
-import { Label } from '@/components/label'
-import { DevIcons } from '@/components/icon'
-import { WorkCard } from '@/components/card'
-import { works } from '@/data'
+import { Header, Footer } from './components/navigation'
+import { SectionTitle } from './components/title'
+import { Label } from './components/label'
+import { DevIcons } from './components/icon'
+import { WorkCard } from './components/card'
+import { works } from './data'
 
 export default function Home() {
   return (

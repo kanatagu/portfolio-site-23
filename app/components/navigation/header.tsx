@@ -1,10 +1,11 @@
+'use client'
 import { useState } from 'react'
 import Image from 'next/image'
 import NextLink from 'next/link'
 import { FiSettings, FiMenu, FiX } from 'react-icons/fi'
 import { BsTranslate } from 'react-icons/bs'
 import { Link } from 'react-scroll'
-import { ThemeButton } from '@/components/button'
+import { ThemeButton } from '../button'
 import { useTheme } from 'next-themes'
 
 export const Header = () => {

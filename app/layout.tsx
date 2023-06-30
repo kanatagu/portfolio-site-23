@@ -3,9 +3,8 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css'
 import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
 import { Poppins, Raleway } from 'next/font/google'
-import { ThemeProvider } from 'next-themes'
+import { Providers } from './provider'
 
 const poppins = Poppins({
   weight: ['400', '500', '600', '700'],
@@ -19,12 +18,16 @@ const raleway = Raleway({
   variable: '--font-raleway'
 })
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function RootLayout({
+  children
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <ThemeProvider attribute="class">
-      <div className={`${poppins.variable} ${raleway.variable}`}>
-        <Component {...pageProps} />
-      </div>
-    </ThemeProvider>
+    <html lang="en">
+      <body className={`${poppins.variable} ${raleway.variable}`}>
+        <Providers>{children}</Providers>
+      </body>
+    </html>
   )
 }

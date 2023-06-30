@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+'use client'
 import { useTheme } from 'next-themes'
 import { MdOutlineLightMode, MdDarkMode } from 'react-icons/md'
 
@@ -7,17 +7,7 @@ type ThemeButton = {
 }
 
 export const ThemeButton = ({ dropdownMenu = false }: ThemeButton) => {
-  const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  if (!mounted) {
-    return null
-  }
-
   return (
     <button
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}

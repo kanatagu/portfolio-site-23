@@ -1,3 +1,4 @@
+'use client'
 import { useState } from 'react'
 import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -5,8 +6,8 @@ import { Navigation, Pagination, Autoplay } from 'swiper'
 import { MdClose } from 'react-icons/md'
 import { SiGithub } from 'react-icons/si'
 import { FiLink } from 'react-icons/fi'
-import { Label } from '@/components/label'
-import { WorkType } from '@/data'
+import { Label } from '../label'
+import { WorkType } from '../../data'
 
 type WorkCardProps = {
   work: WorkType
@@ -28,7 +29,7 @@ export const WorkCard = ({ work }: WorkCardProps) => {
           alt="K"
           width="360"
           height="240"
-          className="object-contain h-full rounded-lg opacity-40 md:opacity-100 group-hover/item:opacity-20"
+          className="object-cover object-top h-full rounded-lg opacity-40 md:opacity-100 group-hover/item:opacity-20"
         ></Image>
         <div className="opacity-100 absolute inset-0 flex flex-col px-8 translate-y-1/4 group-hover/item:opacity-100 group-hover/item:translate-y-1/4 transition-all duration-500 ease-in-out md:opacity-0 md:translate-y-2/4">
           <h3 className="text-2xl font-bold text-gray-50">{work.title}</h3>
@@ -54,7 +55,7 @@ export const WorkCard = ({ work }: WorkCardProps) => {
         <>
           <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-30">
             <div className="p-4 w-full md:max-w-4xl">
-              <div className="relative border-0 rounded-lg shadow-lg flex flex-col w-full bg-black px-3 py-8 max-h-[calc(100vh-40px)] md:p-8">
+              <div className="relative border-0 rounded-lg shadow-lg flex flex-col w-full bg-black px-3 py-8 max-h-[calc(100vh-40px)] md:p-8 md:pb-16">
                 <button
                   className="absolute top-2 right-2 text-gray-50 font-bold w-fit ml-auto text-2xl md:text-4xl md:top-3 md:right-3 hover:opacity-70"
                   type="button"
