@@ -28,7 +28,7 @@ export const WorkCard = ({ work }: WorkCardProps) => {
           alt="K"
           width="360"
           height="240"
-          className="object-cover h-full rounded-lg opacity-40 md:opacity-100 group-hover/item:opacity-40"
+          className="object-contain h-full rounded-lg opacity-40 md:opacity-100 group-hover/item:opacity-20"
         ></Image>
         <div className="opacity-100 absolute inset-0 flex flex-col px-8 translate-y-1/4 group-hover/item:opacity-100 group-hover/item:translate-y-1/4 transition-all duration-500 ease-in-out md:opacity-0 md:translate-y-2/4">
           <h3 className="text-2xl font-bold text-gray-50">{work.title}</h3>
@@ -80,13 +80,15 @@ export const WorkCard = ({ work }: WorkCardProps) => {
                       {work.images.map((image) => (
                         <SwiperSlide key={image}>
                           <div className="bg-gray-200 w-80 mx-auto p-1 h-44 md:w-4/5 md:h-96 md:p-2">
-                            <Image
-                              src={`/images/works/${image}`}
-                              width="660"
-                              height="440"
-                              alt="work1"
-                              className="w-full object-cover h-full"
-                            />
+                            <a href={`/images/works/${image}`} target="_blank">
+                              <Image
+                                src={`/images/works/${image}`}
+                                width="660"
+                                height="440"
+                                alt="work1"
+                                className="w-full object-cover object-top h-full"
+                              />
+                            </a>
                           </div>
                         </SwiperSlide>
                       ))}
@@ -94,7 +96,7 @@ export const WorkCard = ({ work }: WorkCardProps) => {
                   </div>
 
                   <div className="pt-6 md:w-4/5 md:mx-auto">
-                    <h3 className="text-xl font-bold md:text-2xl">
+                    <h3 className="text-xl font-bold md:text-2xl text-gray-100">
                       {work.title}
                     </h3>
                     <div className="flex flex-col gap-8 pt-8 md:px-3">
@@ -141,14 +143,15 @@ export const WorkCard = ({ work }: WorkCardProps) => {
                           </a>
                         </div>
                       )}
-                      {work.github && (
-                        <div>
-                          <h4 className="font-bold text-gray-100 flex items-center mb-2 md:text-xl">
-                            <span className="pr-1 md:pr-2">
-                              <SiGithub />
-                            </span>
-                            Github
-                          </h4>
+
+                      <div>
+                        <h4 className="font-bold text-gray-100 flex items-center mb-2 md:text-xl">
+                          <span className="pr-1 md:pr-2">
+                            <SiGithub />
+                          </span>
+                          Github
+                        </h4>
+                        {work.github ? (
                           <a
                             href={work.github}
                             target="_blank"
@@ -157,8 +160,10 @@ export const WorkCard = ({ work }: WorkCardProps) => {
                           >
                             {work.github}
                           </a>
-                        </div>
-                      )}
+                        ) : (
+                          <div className="text-gray-100">Confidential</div>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>

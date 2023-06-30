@@ -69,19 +69,6 @@ export const Header = () => {
             <li>
               <Link
                 className="cursor-pointer hover:text-purple-100"
-                to="skills"
-                spy={true}
-                smooth={true}
-                offset={-120}
-                duration={650}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                SKILLS
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="cursor-pointer hover:text-purple-100"
                 to="work"
                 spy={true}
                 smooth={true}
@@ -90,6 +77,19 @@ export const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 WORK
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="cursor-pointer hover:text-purple-100"
+                to="skills"
+                spy={true}
+                smooth={true}
+                offset={-120}
+                duration={650}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                SKILLS
               </Link>
             </li>
             <li>

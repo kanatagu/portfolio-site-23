@@ -25,7 +25,7 @@ export default function Home() {
             Build web applications and services
           </p>
           <p className="text-lg pt-6 tracking-wide md:text-2xl dark:text-gray-100">
-            I&apos;m a creative web developer, experiences with front-end,
+            I&apos;m a creative web develope with experiences in front-end,
             back-end and design.
           </p>
           <div className="pt-12">
@@ -58,16 +58,48 @@ export default function Home() {
             <div className="mt-16 md:w-[47%] md:mt-0">
               <div>
                 <h3 className="font-bold text-2xl">Story</h3>
-                <p className="mt-4 text-left md:text-lg md:mt-8">
-                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                  Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-                  natoque penatibus et magnis dis parturient montes, nascetur
-                  ridiculus mus. Donec quam felis, ultricies nec, pellentesque
-                  eu, pretium quis, sem. Nulla consequat massa quis enim. Donec
-                  pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
-                  In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
-                  justo. Nullam dictum felis eu pede mollis pretium.{' '}
-                </p>
+                <div className="dark:text-gray-100 mt-4 text-left md:text-lg md:mt-8">
+                  <p>
+                    I&apos;m a web developer with experiences in back-end and
+                    design but especially front-end. My passion is making
+                    meaningful and valuable web services and solving problems
+                    for better world. I love{' '}
+                    <span className="text-purple-200 dark:text-purple-50">
+                      learning new things
+                    </span>{' '}
+                    and{' '}
+                    <span className="text-purple-200 dark:text-purple-50">
+                      expanding
+                    </span>{' '}
+                    my knowledge.
+                  </p>
+                  <p className="pt-4">
+                    My web development journey began in 2020 when I started
+                    self-learning HTML and CSS. Then, I gained experience as a
+                    front-end engineer, with a primary focus on{' '}
+                    <span className="text-purple-200 dark:text-purple-50">
+                      React
+                    </span>
+                    . Within a year, I was entrusted with the role of{' '}
+                    <span className="text-purple-200 dark:text-purple-50">
+                      leading projects and teams
+                    </span>{' '}
+                    within my organization, where I handled tasks such as
+                    requirement definition and technology selection.
+                  </p>
+                  <p className="pt-4">
+                    As a developer, I&apos;ve been trying to design and coding
+                    with a focus on{' '}
+                    <span className="text-purple-200 dark:text-purple-50">
+                      maintainability
+                    </span>
+                    and{' '}
+                    <span className="text-purple-200 dark:text-purple-50">
+                      scalability
+                    </span>
+                    .
+                  </p>
+                </div>
               </div>
               <div className="mt-16 md:mt-18">
                 <h3 className="font-bold text-2xl">Things I like</h3>
@@ -81,6 +113,21 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* WORK */}
+        <section className="mt-32 md:mt-60" id="work">
+          <SectionTitle title="WORK" />
+          <div className="mt-10 md:text-xl md:text-center md:mt-14">
+            Some things I&apos;ve built for companies and personal projects.{' '}
+            <br />
+            Please click each projects to see more information.
+          </div>
+          <div className="mt-10 flex flex-col flex-wrap gap-4 items-center md:flex-row md:mt-14 md:gap-7">
+            {works.map((work) => (
+              <WorkCard work={work} key={work.id} />
+            ))}
           </div>
         </section>
 
@@ -106,21 +153,6 @@ export default function Home() {
               </h3>
               <DevIcons type="tool" />
             </div>
-          </div>
-        </section>
-
-        {/* WORK */}
-        <section className="mt-32 md:mt-60" id="work">
-          <SectionTitle title="WORK" />
-          <div className="mt-10 md:text-xl md:text-center md:mt-14">
-            Some things I&apos;ve built for companies and personal projects.{' '}
-            <br />
-            Please click each projects to see more information.
-          </div>
-          <div className="mt-10 flex flex-col flex-wrap gap-4 items-center md:flex-row md:mt-14 md:gap-7">
-            {works.map((work) => (
-              <WorkCard work={work} key={work.id} />
-            ))}
           </div>
         </section>
 

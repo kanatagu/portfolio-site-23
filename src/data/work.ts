@@ -4,46 +4,49 @@ export type WorkType = {
   images: string[]
   overview: string
   tech: string[]
-  website: string | undefined
-  github: string | undefined
+  website: string | null
+  github: string | null
 }
 
 export const works: WorkType[] = [
   {
     id: 1,
-    title: 'Learning App',
-    images: ['work1-1.png', 'work1-2.jpg', 'work1-3.jpg'],
+    title: 'Learning Child App',
+    images: ['work1-1.jpg', 'work1-2.jpg', 'work1-3.jpg', 'work1-4.jpg'],
     overview:
-      'Learning App is for children. Learning App is for children Learning App is for children or children or childrenLearning App is for children. Learning App is for children Learning App is for children or children or childrenLearning App is for children. Learning App is for children Learning App is for children or children or childrenLearning App is for children. Learning App is for children Learning App is for children or children or childrenLearning App is for children. Learning App is for children Learning App is for children or children or childrenLearning App is for children. Learning App is for children Learning App is for children or children or childrenLearning App is for children. Learning App is for children Learning App is for children or children or children',
-    tech: ['React', 'Next.js', 'ChakraUI', 'ChakraUI', 'ChakraUI', 'ChakraUI'],
-    website: 'https://google.com/',
-    github: 'https://github.com/'
+      'Learning subscription service for elementary school children. This service encourage children to improve their thinking skills. I joined as a front end-lead engineer and it took for one year to release from scratch.',
+    tech: [
+      'TypeScript',
+      'React',
+      'Next.js',
+      'ChakraUI',
+      'Redux Toolkit',
+      'RTK Query',
+      'AWS Cognito',
+      'Stripe'
+    ],
+    website: 'https://kangaemax.com/login',
+    github: null
   },
   {
     id: 2,
-    title: 'SomeApp',
-    images: ['work1-1.png', 'work1-2.jpg', 'work1-3.jpg'],
-    overview: 'Learning App is for children',
-    tech: ['React', 'Next.js', 'ChakraUI'],
-    website: 'https://google.com/',
-    github: 'https://github.com/'
+    title: 'Moving Matching App',
+    images: ['work2-1.jpg', 'work2-2.jpg', 'work2-3.jpg'],
+    overview:
+      'Matching web service for people who live alone and moving companies with providing low fixed cost. There are many form for users to find potential companies to match. I joined as a front end developer.',
+    tech: ['TypeScript', 'React', 'Sass', 'Axious', 'React Hook Form'],
+    website: 'https://www.t-hikkoshi-navi.jp/',
+    github: null
   },
   {
     id: 3,
-    title: 'SomeApp',
-    images: ['work1-1.png', 'work1-2.jpg', 'work1-3.jpg'],
-    overview: 'Learning App is for children',
-    tech: ['React', 'Next.js', 'ChakraUI'],
-    website: 'https://google.com/',
-    github: 'https://github.com/'
-  },
-  {
-    id: 4,
-    title: 'SomeApp',
-    images: ['work1-1.png', 'work1-2.jpg', 'work1-3.jpg'],
-    overview: 'Learning App is for children',
-    tech: ['React', 'Next.js', 'ChakraUI'],
-    website: 'https://google.com/',
-    github: 'https://github.com/'
+    title: 'Portfolio site',
+    images: ['work3-1.jpg', 'work3-2.jpg'],
+    overview:
+      'This static website has feature of dark theme mode and multi language mode. I designed and made it with Next.js',
+    tech: ['TypeScript', 'Next.js', 'TailwindCSS'],
+    // TODO Change URL
+    website: 'https://kangaemax.com/login',
+    github: null
   }
 ]
