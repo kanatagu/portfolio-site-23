@@ -3,8 +3,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import NextLink from 'next/link'
 import Link from 'next-intl/link'
-import { usePathname } from 'next-intl/client'
-import { FiSettings, FiMenu, FiX } from 'react-icons/fi'
+import { FiMenu, FiX } from 'react-icons/fi'
 import { BsTranslate } from 'react-icons/bs'
 import { Link as ScrollLink } from 'react-scroll'
 import { ThemeButton } from '../button'
@@ -14,8 +13,6 @@ export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isLangSettingOpen, setIsLangSettingOpen] = useState(false)
   const { theme } = useTheme()
-  const pathname = usePathname()
-  console.log('pathname', pathname)
 
   return (
     <header className="fixed z-10 h-20 w-full text-gray-50 bg-purple-50 dark:bg-purple-500 top-0">

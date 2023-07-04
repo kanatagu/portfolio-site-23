@@ -9,6 +9,7 @@ import { SectionTitle } from '@/components/title'
 import { Label } from '@/components/label'
 import { DevIcons } from '@/components/icon'
 import { WorkCard } from '@/components/card'
+import { RevealAnimation } from '@/components/animation'
 import { works } from '@/data'
 
 export default function Home() {
@@ -19,38 +20,44 @@ export default function Home() {
       <Header />
       <main className="pt-20 px-4 max-w-container mx-auto">
         {/* HERO */}
-        <section className="relative pt-16 md:pt-36" id="home">
-          <h1 className="text-5xl font-bold tracking-wide md:text-7xl">
-            Hi, I&apos;m
-            <span className="text-purple-100 block md:inline md:pl-2">
-              Kana Taguchi
-              <span className="text-black dark:text-gray-50">.</span>
-            </span>
-          </h1>
-          <p className="text-2xl font-semibold pt-10 tracking-wide md:text-4xl dark:text-gray-100">
-            {t('homeSubtitle')}
-          </p>
-          <p className="text-lg pt-6 tracking-wide md:text-2xl dark:text-gray-100">
-            {t('homeDescription')}
-          </p>
-          <div className="pt-12">
-            <Link
-              className="inline-block btn-square"
-              to="work"
-              spy={true}
-              smooth={true}
-              offset={-120}
-              duration={650}
-            >
-              VIEW MY WORKS
-            </Link>
-          </div>
-          <div className="absolute bottom-2 right-0 md:right-10">
-            <div className="animate-bounce text-3xl text-purple-50">
-              <HiOutlineChevronDoubleDown />
+        <RevealAnimation>
+          <section className="relative pt-16 md:pt-36" id="home">
+            <RevealAnimation>
+              <h1 className="text-5xl font-bold tracking-wide md:text-7xl">
+                Hi, I&apos;m
+                <span className="text-purple-100 block md:inline md:pl-2">
+                  Kana Taguchi
+                  <span className="text-black dark:text-gray-50">.</span>
+                </span>
+              </h1>
+            </RevealAnimation>
+
+            <p className="text-2xl font-semibold pt-10 tracking-wide md:text-4xl dark:text-gray-100">
+              {t('homeSubtitle')}
+            </p>
+            <p className="text-lg pt-6 tracking-wide md:text-2xl dark:text-gray-100">
+              {t('homeDescription')}
+            </p>
+
+            <div className="pt-12">
+              <Link
+                className="inline-block btn-square"
+                to="work"
+                spy={true}
+                smooth={true}
+                offset={-120}
+                duration={650}
+              >
+                VIEW MY WORKS
+              </Link>
             </div>
-          </div>
-        </section>
+            <div className="absolute bottom-2 right-0 md:right-10">
+              <div className="animate-bounce text-3xl text-purple-50">
+                <HiOutlineChevronDoubleDown />
+              </div>
+            </div>
+          </section>
+        </RevealAnimation>
 
         {/* ABOUT */}
         <section className="mt-32 md:mt-60" id="about">
