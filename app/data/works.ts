@@ -12,7 +12,7 @@ export const works: WorkType[] = [
   {
     id: 1,
     title: { en: 'Learning Child App', ja: '小学生学習アプリ' },
-    images: ['work1-1.jpg', 'work1-2.jpg', 'work1-3.jpg', 'work1-4.jpg'],
+    images: ['work1-1.webp', 'work1-2.webp', 'work1-3.webp', 'work1-4.webp'],
     overview: {
       en: 'Learning subscription service for elementary school children. This service encourage children to improve their thinking skills. I joined as a front end-lead engineer and it took for one year to release from scratch.',
       ja: '小学生用のサブスク型学習サービスです。子どもたちの考える力を鍛える内容を提供しています。フロントエンドリーダーとして参画し、0→1開発を担当しました。リリースまでは1年の大きめのプロジェクトです。'
