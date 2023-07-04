@@ -1,13 +1,14 @@
 'use client'
 import { useState } from 'react'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Autoplay } from 'swiper'
 import { MdClose } from 'react-icons/md'
 import { SiGithub } from 'react-icons/si'
 import { FiLink } from 'react-icons/fi'
-import { Label } from '../label'
-import { WorkType } from '../../data'
+import { Label } from '@/components/label'
+import { WorkType } from '@/data'
 
 type WorkCardProps = {
   work: WorkType
@@ -15,6 +16,10 @@ type WorkCardProps = {
 
 export const WorkCard = ({ work }: WorkCardProps) => {
   const [showModal, setShowModal] = useState(false)
+  const pathname = usePathname()
+
+  const title = pathname === '/ja' ? work.title.ja : work.title.en
+  const overview = pathname === '/ja' ? work.overview.ja : work.overview.en
 
   return (
     <>
@@ -29,12 +34,12 @@ export const WorkCard = ({ work }: WorkCardProps) => {
           alt="K"
           width="360"
           height="240"
-          className="object-cover object-top h-full rounded-lg opacity-40 md:opacity-100 group-hover/item:opacity-20"
+          className="object-cover object-top h-full rounded-lg opacity-20 md:opacity-100 group-hover/item:opacity-20"
         ></Image>
         <div className="opacity-100 absolute inset-0 flex flex-col px-8 translate-y-1/4 group-hover/item:opacity-100 group-hover/item:translate-y-1/4 transition-all duration-500 ease-in-out md:opacity-0 md:translate-y-2/4">
-          <h3 className="text-2xl font-bold text-gray-50">{work.title}</h3>
+          <h3 className="text-2xl font-bold text-gray-50">{title}</h3>
           <p className="pt-2 text-sm line-clamp-2 text-gray-50 md:text-md">
-            {work.overview}
+            {overview}
           </p>
           <div className="flex gap-4 pt-4">
             {work.tech.slice(0, 3).map((item) => (
@@ -98,15 +103,15 @@ export const WorkCard = ({ work }: WorkCardProps) => {
 
                   <div className="pt-6 md:w-4/5 md:mx-auto">
                     <h3 className="text-xl font-bold md:text-2xl text-gray-100">
-                      {work.title}
+                      {title}
                     </h3>
                     <div className="flex flex-col gap-8 pt-8 md:px-3">
                       <div>
                         <h4 className="font-bold text-gray-100 mb-3 md:text-xl">
                           OverView
                         </h4>
-                        <p className="text-sm text-gray-100 md:text-base">
-                          {work.overview}
+                        <p className="text-sm text-gray-100 whitespace-pre-line md:text-base">
+                          {overview}
                         </p>
                       </div>
                       <div>

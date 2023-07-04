@@ -1,14 +1,17 @@
 'use client'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import { Link } from 'react-scroll'
-import { Header, Footer } from './components/navigation'
-import { SectionTitle } from './components/title'
-import { Label } from './components/label'
-import { DevIcons } from './components/icon'
-import { WorkCard } from './components/card'
-import { works } from './data'
+import { Header, Footer } from '@/components/navigation'
+import { SectionTitle } from '@/components/title'
+import { Label } from '@/components/label'
+import { DevIcons } from '@/components/icon'
+import { WorkCard } from '@/components/card'
+import { works } from '@/data'
 
 export default function Home() {
+  const t = useTranslations('Index')
+
   return (
     <div className="font-main text-black bg-beige-50 dark:bg-black dark:text-gray-50 min-h-screen">
       <Header />
@@ -23,11 +26,10 @@ export default function Home() {
             </span>
           </h1>
           <p className="text-2xl font-semibold pt-10 tracking-wide md:text-4xl dark:text-gray-100">
-            Build web applications and services
+            {t('homeSubtitle')}
           </p>
           <p className="text-lg pt-6 tracking-wide md:text-2xl dark:text-gray-100">
-            I&apos;m a creative web develope with experiences in front-end,
-            back-end and design.
+            {t('homeDescription')}
           </p>
           <div className="pt-12">
             <Link
@@ -59,48 +61,10 @@ export default function Home() {
             <div className="mt-16 md:w-[47%] md:mt-0">
               <div>
                 <h3 className="font-bold text-2xl">Story</h3>
-                <div className="dark:text-gray-100 mt-4 text-left md:text-lg md:mt-8">
-                  <p>
-                    I&apos;m a web developer with experiences in back-end and
-                    design but especially front-end. My passion is making
-                    meaningful and valuable web services and solving problems
-                    for better world. I love{' '}
-                    <span className="text-purple-200 dark:text-purple-50">
-                      learning new things
-                    </span>{' '}
-                    and{' '}
-                    <span className="text-purple-200 dark:text-purple-50">
-                      expanding
-                    </span>{' '}
-                    my knowledge.
-                  </p>
-                  <p className="pt-4">
-                    My web development journey began in 2020 when I started
-                    self-learning HTML and CSS. Then, I gained experience as a
-                    front-end engineer, with a primary focus on{' '}
-                    <span className="text-purple-200 dark:text-purple-50">
-                      React
-                    </span>
-                    . Within a year, I was entrusted with the role of{' '}
-                    <span className="text-purple-200 dark:text-purple-50">
-                      leading projects and teams
-                    </span>{' '}
-                    within my organization, where I handled tasks such as
-                    requirement definition and technology selection.
-                  </p>
-                  <p className="pt-4">
-                    As a developer, I&apos;ve been trying to design and coding
-                    with a focus on{' '}
-                    <span className="text-purple-200 dark:text-purple-50">
-                      maintainability
-                    </span>
-                    and{' '}
-                    <span className="text-purple-200 dark:text-purple-50">
-                      scalability
-                    </span>
-                    .
-                  </p>
-                </div>
+                <div
+                  className="flex flex-col gap-4 dark:text-gray-100 mt-4 text-left md:text-lg md:mt-8 [&_span]:text-purple-200 [&_span]:dark:text-purple-50"
+                  dangerouslySetInnerHTML={{ __html: t.raw('about') }}
+                ></div>
               </div>
               <div className="mt-16 md:mt-18">
                 <h3 className="font-bold text-2xl">Things I like</h3>
@@ -120,11 +84,9 @@ export default function Home() {
         {/* WORK */}
         <section className="mt-32 md:mt-60" id="work">
           <SectionTitle title="WORK" />
-          <div className="mt-10 md:text-xl md:text-center md:mt-14">
-            Some things I&apos;ve built for companies and personal projects.{' '}
-            <br />
-            Please click each projects to see more information.
-          </div>
+          <p className="mt-10 whitespace-pre-line md:text-xl md:text-center md:mt-14">
+            {t('work')}
+          </p>
           <div className="mt-10 flex flex-col flex-wrap gap-4 items-center md:flex-row md:mt-14 md:gap-7">
             {works.map((work) => (
               <WorkCard work={work} key={work.id} />
@@ -160,10 +122,8 @@ export default function Home() {
         {/* CONTACT */}
         <section className="pt-32 md:pt-60" id="contact">
           <SectionTitle title="CONTACT" />
-          <p className="mt-10 md:text-xl md:text-center md:mt-14">
-            I&apos;m currently looking for a new opportunity. <br />
-            If you have any questions about me, projects or anything, please
-            feel free to contact me.
+          <p className="mt-10 whitespace-pre-line md:text-xl md:text-center md:mt-14">
+            {t('contact')}
           </p>
           <div className="text-center mt-12">
             <a href="mailto:kana.vc2341@gmail.com" className="inline-block btn">

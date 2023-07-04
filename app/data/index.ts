@@ -1,1 +1,1 @@
-export { works, type WorkType } from './work'
+export { works, type WorkType } from './works'

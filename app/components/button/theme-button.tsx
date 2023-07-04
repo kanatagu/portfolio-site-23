@@ -12,7 +12,7 @@ export const ThemeButton = ({ dropdownMenu = false }: ThemeButton) => {
     <button
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
       className={`text-4xl hover:${
-        dropdownMenu ? 'opacity-60' : 'text-purple-100'
+        dropdownMenu ? 'text-purple-100' : 'text-purple-100'
       }`}
     >
       {theme === 'dark' ? <MdOutlineLightMode /> : <MdDarkMode />}

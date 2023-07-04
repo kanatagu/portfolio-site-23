@@ -1,12 +1,12 @@
 'use client'
-import { ThemeProvider } from 'next-themes'
 import { useState, useEffect } from 'react'
+import { ThemeProvider as NextThemeProvider } from 'next-themes'
 
 type ProviderProps = {
   children: React.ReactNode
 }
 
-export const Providers = ({ children }: ProviderProps) => {
+export const ThemeProvider = ({ children }: ProviderProps) => {
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
@@ -17,5 +17,5 @@ export const Providers = ({ children }: ProviderProps) => {
     return null
   }
 
-  return <ThemeProvider attribute="class">{children}</ThemeProvider>
+  return <NextThemeProvider attribute="class">{children}</NextThemeProvider>
 }
