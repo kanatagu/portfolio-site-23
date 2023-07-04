@@ -32,6 +32,9 @@ module.exports = {
       },
       maxWidth: {
         container: '73.25rem' /* 1172px */
+      },
+      animation: {
+        'spin-slow': 'spin 3s linear infinite'
       }
     }
   }

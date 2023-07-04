@@ -2,6 +2,8 @@
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { Link } from 'react-scroll'
+import { SiGithub, SiLinkedin } from 'react-icons/si'
+import { HiOutlineChevronDoubleDown } from 'react-icons/hi'
 import { Header, Footer } from '@/components/navigation'
 import { SectionTitle } from '@/components/title'
 import { Label } from '@/components/label'
@@ -17,7 +19,7 @@ export default function Home() {
       <Header />
       <main className="pt-20 px-4 max-w-container mx-auto">
         {/* HERO */}
-        <section className="pt-16 md:pt-36" id="home">
+        <section className="relative pt-16 md:pt-36" id="home">
           <h1 className="text-5xl font-bold tracking-wide md:text-7xl">
             Hi, I&apos;m
             <span className="text-purple-100 block md:inline md:pl-2">
@@ -43,12 +45,17 @@ export default function Home() {
               VIEW MY WORKS
             </Link>
           </div>
+          <div className="absolute bottom-2 right-0 md:right-10">
+            <div className="animate-bounce text-3xl text-purple-50">
+              <HiOutlineChevronDoubleDown />
+            </div>
+          </div>
         </section>
 
         {/* ABOUT */}
         <section className="mt-32 md:mt-60" id="about">
           <SectionTitle title="ABOUT ME" />
-          <div className="flex flex-col items-center mt-11 text-center justify-items-center md:flex-row md:justify-between md:text-left md:mt-14">
+          <div className="flex flex-col items-center mt-11 text-center justify-items-center md:flex-row md:justify-between md:text-left md:mt-14 flex-wrap">
             <div className="md:w-[42%]">
               <Image
                 src="/images/me.jpg"
@@ -57,6 +64,24 @@ export default function Home() {
                 height="600"
                 className="rounded-full w-full h-auto"
               />
+              <div className="flex justify-center gap-20 text-2xl font-bold mt-8 md:text-4xl md:mt-14">
+                <a
+                  href={'https://www.linkedin.com/in/kana-taguchi-49a510271/'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:opacity-70"
+                >
+                  <SiLinkedin />
+                </a>
+                <a
+                  href={'https://github.com/Kana-TAGUCHI'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:opacity-70"
+                >
+                  <SiGithub />
+                </a>
+              </div>
             </div>
             <div className="mt-16 md:w-[47%] md:mt-0">
               <div>
@@ -66,7 +91,7 @@ export default function Home() {
                   dangerouslySetInnerHTML={{ __html: t.raw('about') }}
                 ></div>
               </div>
-              <div className="mt-16 md:mt-18">
+              <div className="mt-16 md:mt-12">
                 <h3 className="font-bold text-2xl">Things I like</h3>
                 <div className="flex flex-wrap mt-4 gap-4 justify-center md:mt-8 md:gap-10 md:justify-start">
                   <Label text="WorkOut" />
