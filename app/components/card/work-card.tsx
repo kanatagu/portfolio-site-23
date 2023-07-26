@@ -93,6 +93,7 @@ export const WorkCard = ({ work }: WorkCardProps) => {
                                 height="440"
                                 alt="work1"
                                 className="w-full object-cover object-top h-full"
+                                priority={true}
                               />
                             </a>
                           </div>

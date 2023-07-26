@@ -33,7 +33,7 @@ export const works: WorkType[] = [
   {
     id: 2,
     title: { en: 'Moving Matching App', ja: '引越しマッチングアプリ' },
-    images: ['work2-1.jpg', 'work2-2.jpg', 'work2-3.jpg'],
+    images: ['work2-1.webp', 'work2-2.webp', 'work2-3.webp'],
     overview: {
       en: 'Matching web service for people who live alone and moving companies with providing low fixed cost. There are many form for users to find potential companies to match. I joined as a front end developer.',
       ja: '単身者向けの引越しマッチングアプリで、基本的には固定且つ安価でユーザーはサービスを利用できます。見積もりの段階でユーザーの場所や内容を入力すると、金額と日程が表示されます。\nフロントエンドエンジニアとして参画しておりました。'
@@ -45,7 +45,7 @@ export const works: WorkType[] = [
   {
     id: 3,
     title: { en: 'Portfolio site', ja: 'ポートフォリオサイト' },
-    images: ['work3-1.jpg', 'work3-2.jpg'],
+    images: ['work3-1.webp', 'work3-2.webp'],
     overview: {
       en: 'This static website has feature of dark theme mode and multi language mode. I designed and made it with Next.js',
       ja: 'こちらの静的サイトは、ダークモード機能と言語切り替えを追加しております。\nデザインはFigma、サイトはNext.jsで作りました。'
