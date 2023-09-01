@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
@@ -22,6 +23,11 @@ const raleway = Raleway({
 
 export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'ja' }]
+}
+
+export const metadata: Metadata = {
+  title: "KANA's Portfolio",
+  description: "KANA's portfolio weibsite"
 }
 
 export default async function LocaleLayout({
