@@ -14,11 +14,11 @@ export const About = () => {
       <div className="flex flex-col items-center mt-11 text-center justify-items-center md:flex-row md:justify-between md:text-left md:mt-14 flex-wrap">
         <div className="md:w-[42%]">
           <Image
-            src="/images/me.jpg"
+            src="/images/about-me.jpg"
             alt="face picture"
             width="600"
             height="600"
-            className="rounded-full w-full h-auto"
+            className="rounded-full md:w-4/5 mx-auto h-auto"
           />
           <div className="flex justify-center gap-20 text-2xl font-bold mt-8 md:text-4xl md:mt-14">
             <a
