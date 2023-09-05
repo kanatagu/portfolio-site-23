@@ -10,6 +10,23 @@
   @apply font-semibold shadow-md bg-gradient-to-b from-purple-200 to-purple-300 text-xl px-10 tracking-wide py-4 transition duration-300 rounded-lg cursor-pointer text-gray-50 md:text-xl hover:scale-110;
 }
 
+.skill {
+  
+}
+
+.skill:hover {
+  transform: scale(1.1);
+  background-color: #3b5998; /* Change the background color to match the social site */
+}
+
+.skill-icon {
+}
+
+.skill-icon:hover {
+  color: #fff;
+  transform: scale(1);
+}
+
 /* Swiper */
 .swiper {
   @apply h-52 md:h-[27rem];

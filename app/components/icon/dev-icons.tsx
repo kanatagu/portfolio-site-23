@@ -19,6 +19,7 @@ import {
   SiFigma,
   SiAdobexd
 } from 'react-icons/si'
+import Image from 'next/image'
 
 type DevIconsType = {
   type: 'frontEnd' | 'backEnd' | 'tool'
@@ -27,85 +28,85 @@ type DevIconsType = {
 export const DevIcons = ({ type }: DevIconsType) => {
   const frontEnd = [
     {
-      icon: <SiHtml5 className="text-[2.5rem] md:text-7xl" />,
+      image: 'html5.svg',
       text: 'HTML5'
     },
     {
-      icon: <SiCss3 className="text-[2.5rem] md:text-7xl" />,
+      image: 'css3.svg',
       text: 'CSS3'
     },
     {
-      icon: <SiJavascript className="text-[2.5rem] md:text-7xl" />,
+      image: 'javascript.svg',
       text: 'JavaScript'
     },
     {
-      icon: <SiTypescript className="text-[2.5rem] md:text-7xl" />,
+      image: 'typescript.svg',
       text: 'TypeScript'
     },
     {
-      icon: <SiReact className="text-[2.5rem] md:text-7xl" />,
+      image: 'react.svg',
       text: 'React'
     },
     {
-      icon: <SiNextdotjs className="text-[2.5rem] md:text-7xl" />,
+      image: 'nextjs.svg',
       text: 'Next.js'
     },
     {
-      icon: <SiSass className="text-[2.5rem] md:text-7xl" />,
+      image: 'sass.svg',
       text: 'Sass'
     },
     {
-      icon: <SiChakraui className="text-[2.5rem] md:text-7xl" />,
-      text: 'ChakraUI'
+      image: 'chakraui.svg',
+      text: 'Chakra UI'
     },
     {
-      icon: <SiTailwindcss className="text-[2.5rem] md:text-7xl" />,
+      image: 'tailwindcss.svg',
       text: 'Tailwind Css'
     }
   ]
 
   const backEnd = [
     {
-      icon: <SiNodedotjs className="text-[2.5rem] md:text-7xl" />,
+      image: 'nodejs.svg',
       text: 'Node.js'
     },
     {
-      icon: <SiExpress className="text-[2.5rem] md:text-7xl" />,
+      image: 'express.svg',
       text: 'Express.js'
     },
     {
-      icon: <SiNestjs className="text-[2.5rem] md:text-7xl" />,
+      image: 'nestjs.svg',
       text: 'Nest.js'
     },
     {
-      icon: <SiFirebase className="text-[2.5rem] md:text-7xl" />,
+      image: 'firebase.svg',
       text: 'Firebase'
     },
     {
-      icon: <SiMongodb className="text-[2.5rem] md:text-7xl" />,
+      image: 'mongodb.svg',
       text: 'MongoDB'
     },
     {
-      icon: <SiPrisma className="text-[2.5rem] md:text-7xl" />,
+      image: 'prisma.svg',
       text: 'Prisma'
     }
   ]
 
   const tool = [
     {
-      icon: <SiGithub className="text-[2.5rem] md:text-7xl" />,
+      image: 'github.svg',
       text: 'Github'
     },
     {
-      icon: <SiDocker className="text-[2.5rem] md:text-7xl" />,
+      image: 'docker.svg',
       text: 'Docker'
     },
     {
-      icon: <SiFigma className="text-[2.5rem] md:text-7xl" />,
+      image: 'figma.svg',
       text: 'Figma'
     },
     {
-      icon: <SiAdobexd className="text-[2.5rem] md:text-7xl" />,
+      image: 'xd.svg',
       text: 'XD'
     }
   ]
@@ -128,10 +129,20 @@ export const DevIcons = ({ type }: DevIconsType) => {
       {renderArray(type).map((item) => (
         <li
           key={item.text}
-          className="text-black dark:text-gray-100 flex flex-col items-center w-20 md:w-28"
+          className="group relative z-10 bg-gray-50 rounded-3xl p-2 cursor-pointer w-20 h-20 md:w-24 md:h-24 overflow-hidden before:content-[''] before:absolute before:top-0 before:-left-[160%] before:bg-gray-100 dark:before:bg-purple-50 before:w-[140%] before:h-full before:skew-x-[-25d] hover:before:animate-skew ease-out"
         >
-          {item.icon}
-          <span className="text-xs pt-2 md:text-lg">{item.text}</span>
+          <div className="relative z-20 flex flex-col items-center justify-center">
+            <Image
+              src={`/images/skills/${item.image}`}
+              alt={item.text}
+              width="80"
+              height="80"
+              className="h-10 w-10 md:w-12 md:h-12"
+            />
+            <span className="text-purple-500 text-xs pt-2 md:text-md group-hover:font-semibold dark:group-hover:text-gray-50">
+              {item.text}
+            </span>
+          </div>
         </li>
       ))}
     </ul>

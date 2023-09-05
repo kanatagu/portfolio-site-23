@@ -178,7 +178,7 @@ export const WorkCard = ({ work }: WorkCardProps) => {
             </div>
           </div>
 
-          <div className="fixed inset-0 z-20 opacity-80 bg-gray-modal"></div>
+          <div className="fixed inset-0 z-20 opacity-80 bg-gray-300"></div>
         </>
       )}
     </>

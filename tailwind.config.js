@@ -24,7 +24,7 @@ module.exports = {
           50: '#F8F8F8',
           100: '#D8D8D8',
           200: '#C9C9C9',
-          modal: '#747276'
+          300: '#747276'
         },
         beige: {
           50: '#EAE4DD'
@@ -34,7 +34,13 @@ module.exports = {
         container: '73.25rem' /* 1172px */
       },
       animation: {
-        'spin-slow': 'spin 3s linear infinite'
+        'spin-slow': 'spin 3s linear infinite',
+        skew: 'skew .5s forwards'
+      },
+      keyframes: {
+        skew: {
+          '100%': { left: '-20%' }
+        }
       }
     }
   }
