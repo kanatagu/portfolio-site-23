@@ -1,24 +1,3 @@
-import {
-  SiHtml5,
-  SiCss3,
-  SiJavascript,
-  SiTypescript,
-  SiReact,
-  SiNextdotjs,
-  SiSass,
-  SiChakraui,
-  SiTailwindcss,
-  SiNodedotjs,
-  SiExpress,
-  SiNestjs,
-  SiFirebase,
-  SiMongodb,
-  SiPrisma,
-  SiGithub,
-  SiDocker,
-  SiFigma,
-  SiAdobexd
-} from 'react-icons/si'
 import Image from 'next/image'
 
 type DevIconsType = {
@@ -129,9 +108,9 @@ export const DevIcons = ({ type }: DevIconsType) => {
       {renderArray(type).map((item) => (
         <li
           key={item.text}
-          className="group relative z-10 bg-gray-50 rounded-3xl p-2 cursor-pointer w-20 h-20 md:w-24 md:h-24 overflow-hidden before:content-[''] before:absolute before:top-0 before:-left-[160%] before:bg-gray-100 dark:before:bg-purple-50 before:w-[140%] before:h-full before:skew-x-[-25d] hover:before:animate-skew ease-out"
+          className="group relative z-10 bg-gray-50 rounded-3xl px-2 py-2 cursor-pointer w-20 h-20 md:py-3 md:w-24 md:h-24 overflow-hidden before:content-[''] before:absolute before:top-0 before:-left-[160%] before:bg-gray-100 dark:before:bg-purple-50 before:w-[140%] before:h-full before:skew-x-[-25d] hover:before:animate-skew ease-out"
         >
-          <div className="relative z-20 flex flex-col items-center justify-center">
+          <div className="relative z-20 flex flex-col items-center justify-between h-full">
             <Image
               src={`/images/skills/${item.image}`}
               alt={item.text}
@@ -139,7 +118,7 @@ export const DevIcons = ({ type }: DevIconsType) => {
               height="80"
               className="h-10 w-10 md:w-12 md:h-12"
             />
-            <span className="text-purple-500 text-xs pt-2 md:text-md group-hover:font-semibold dark:group-hover:text-gray-50">
+            <span className="block text-purple-500 text-xs md:text-md group-hover:font-semibold dark:group-hover:text-gray-50">
               {item.text}
             </span>
           </div>

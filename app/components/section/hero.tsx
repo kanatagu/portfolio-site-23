@@ -42,17 +42,17 @@ export const Hero = () => {
             </div>
           </div>
         </RevealAnimation>
-          <div className="hidden md:block">
-            <div className="w-4/5 p-5 rounded-[200px] border border-gray-200 dark:border-purple-500 mx-auto">
-              <Image
-                src="/images/hero-me.webp"
-                alt="my picture"
-                width="798"
-                height="1081"
-                className="rounded-full w-full h-auto border-4 border-purple-50 shadow-lg shadow-purple-50"
-              />
-            </div>
+        <div className="hidden md:block">
+          <div className="w-4/5 p-5 rounded-[200px] border border-gray-200 dark:border-purple-500 mx-auto">
+            <Image
+              src="/images/hero-me.webp"
+              alt="my picture"
+              width="798"
+              height="1081"
+              className="rounded-full w-full h-auto border-4 border-purple-50 shadow-lg shadow-purple-50"
+            />
           </div>
+        </div>
       </div>
 
       <div className="absolute bottom-2 right-0 md:right-10">
