@@ -12,7 +12,13 @@ export const works: WorkType[] = [
   {
     id: 1,
     title: { en: 'Learning Child App', ja: '小学生学習アプリ' },
-    images: ['work1-1.webp', 'work1-2.webp', 'work1-3.webp', 'work1-4.webp'],
+    images: [
+      'work1-1.webp',
+      'work1-2.webp',
+      'work1-3.webp',
+      'work1-4.webp',
+      'work1-5.webp'
+    ],
     overview: {
       en: 'Learning subscription service for elementary school children. This service encourage children to improve their thinking skills. I joined as a front end-lead engineer and it took for one year to release from scratch.',
       ja: '小学生用のサブスク型学習サービスです。子どもたちの考える力を鍛える内容を提供しています。フロントエンドリーダーとして参画し、0→1開発を担当しました。リリースまでは1年の大きめのプロジェクトです。'
@@ -51,8 +57,31 @@ export const works: WorkType[] = [
       ja: 'こちらの静的サイトは、ダークモード機能と言語切り替えを追加しております。\nデザインはFigma、サイトはNext.jsで作りました。'
     },
     tech: ['TypeScript', 'Next.js', 'TailwindCSS'],
-    // TODO Change URL
-    website: 'https://portfolio-site-23-6yux5zdx3-kana-taguchi.vercel.app/',
+    website: 'https://www.kanataguchi.com/',
     github: 'https://github.com/Kana-TAGUCHI/portfolio-site-23'
+  },
+  {
+    id: 4,
+    title: { en: 'IT Recruitment Service', ja: 'IT人材採用サービス' },
+    images: ['work4-1.webp'],
+    overview: {
+      en: 'IT recruitment service which allows recruiters to employ engineers or designers at lowest cost and prioritizing their culture matching. I joined as a freelance full-stack engineer designing LP site, making API, and implementing front side. We are still making and this service will be released in this winter',
+      ja: 'Fit感を重要視した新しい形のIT特化型人材採用サービスです。\nフリーランスとして参画し、LPのデザインからバックエンド、フロントエンドまで担当しました。'
+    },
+    tech: ['Nest.js', 'Figma', 'TypeScript', 'Next.js', 'Astro'],
+    website: null,
+    github: null
+  },
+  {
+    id: 5,
+    title: { en: 'Budget App', ja: '家計簿アプリ' },
+    images: ['work5-1.webp', 'work5-2.webp', 'work5-3.webp'],
+    overview: {
+      en: 'This is the first app using React.js I made in 2021. I made this to calculate monthly fee and add the feature of authorization using Firebase. You can login using this test user. \nEmail address: test@gmail.com, password: test1133',
+      ja: '2021年にReactを使用して初めて作ったアプリです。月毎の出費を確認することができ、またサインアップ/ログイン機能もついています。こちらのテストユーザーを使用してご確認いただけます。\nEmail address: test@gmail.com, password: test1133'
+    },
+    tech: ['React.js', 'Firebase'],
+    website: 'https://my-budget-app-fc01e.web.app/',
+    github: 'https://github.com/Kana-TAGUCHI/My-budget-app'
   }
 ]

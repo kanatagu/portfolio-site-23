@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
+import { motion } from 'framer-motion'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Autoplay } from 'swiper'
 import { MdClose } from 'react-icons/md'
@@ -21,13 +22,20 @@ export const WorkCard = ({ work }: WorkCardProps) => {
   const title = pathname === '/ja' ? work.title.ja : work.title.en
   const overview = pathname === '/ja' ? work.overview.ja : work.overview.en
 
+  const itemAnimation = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { opacity: 1, scale: 1 }
+  }
+
   return (
     <>
-      <div
+      <motion.div
         tabIndex={work.id}
         role="button"
         className="h-60 w-fit relative rounded-lg cursor-pointer group/item bg-purple-500"
         onClick={() => setShowModal(true)}
+        transition={{ duration: 0.3 }}
+        variants={itemAnimation}
       >
         <Image
           src={`/images/works/${work.images[0]}`}
@@ -54,7 +62,7 @@ export const WorkCard = ({ work }: WorkCardProps) => {
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {showModal && (
         <>
@@ -87,14 +95,13 @@ export const WorkCard = ({ work }: WorkCardProps) => {
                         <SwiperSlide key={image}>
                           <div className="bg-gray-200 w-80 mx-auto p-1 h-44 md:w-4/5 md:h-96 md:p-2">
                             <a href={`/images/works/${image}`} target="_blank">
-                              <Image
+                              <img
                                 src={`/images/works/${image}`}
                                 width="660"
                                 height="440"
-                                alt="work1"
+                                alt="work"
                                 className="w-full object-cover object-top h-full"
-                                priority={true}
-                              />
+                              ></img>
                             </a>
                           </div>
                         </SwiperSlide>
@@ -132,14 +139,15 @@ export const WorkCard = ({ work }: WorkCardProps) => {
                           ))}
                         </div>
                       </div>
-                      {work.website && (
-                        <div>
-                          <h4 className="font-bold text-gray-100 flex items-center mb-2 md:text-xl">
-                            <span className="pr-2 md:pr-2">
-                              <FiLink />
-                            </span>
-                            Website
-                          </h4>
+
+                      <div>
+                        <h4 className="font-bold text-gray-100 flex items-center mb-2 md:text-xl">
+                          <span className="pr-2 md:pr-2">
+                            <FiLink />
+                          </span>
+                          Website
+                        </h4>
+                        {work.website ? (
                           <a
                             href={work.website}
                             target="_blank"
@@ -148,8 +156,10 @@ export const WorkCard = ({ work }: WorkCardProps) => {
                           >
                             {work.website}
                           </a>
-                        </div>
-                      )}
+                        ) : (
+                          <div>Upcoming...</div>
+                        )}
+                      </div>
 
                       <div>
                         <h4 className="font-bold text-gray-100 flex items-center mb-2 md:text-xl">
@@ -168,7 +178,9 @@ export const WorkCard = ({ work }: WorkCardProps) => {
                             {work.github}
                           </a>
                         ) : (
-                          <div className="text-gray-100">Confidential</div>
+                          <div className="text-gray-100">
+                            Sorry, it&apos;s confidential
+                          </div>
                         )}
                       </div>
                     </div>
@@ -178,7 +190,7 @@ export const WorkCard = ({ work }: WorkCardProps) => {
             </div>
           </div>
 
-          <div className="fixed inset-0 z-20 opacity-80 bg-gray-modal"></div>
+          <div className="fixed inset-0 z-20 opacity-80 bg-gray-300"></div>
         </>
       )}
     </>

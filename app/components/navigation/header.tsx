@@ -15,7 +15,7 @@ export const Header = () => {
   const { theme } = useTheme()
 
   return (
-    <header className="fixed z-10 h-20 w-full text-gray-50 bg-purple-50 dark:bg-purple-500 top-0">
+    <header className="fixed z-30 h-20 w-full text-gray-50 bg-purple-50 dark:bg-purple-500 top-0">
       <div className="flex justify-between items-center max-w-container mx-auto w-full h-full px-4">
         <NextLink href="/">
           <Image
