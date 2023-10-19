@@ -10,7 +10,7 @@ export const Hero = () => {
 
   return (
     <section className="relative pt-16 md:pt-20" id="home">
-      <div className="flex items-center gap-6 justify-around">
+      <div className="flex items-center gap-6 justify-around lg:h-[538px]">
         <RevealAnimation>
           <div>
             <span className="text-lg font-bold tracking-wide md:text-2xl">
@@ -42,8 +42,8 @@ export const Hero = () => {
             </div>
           </div>
         </RevealAnimation>
-        <div className="hidden md:block">
-          <div className="w-4/5 p-5 rounded-[200px] border border-gray-200 dark:border-purple-500 mx-auto">
+        <div className="hidden md:block w-[380px]">
+          <div className="p-5 rounded-[200px] border border-gray-200 dark:border-purple-500 mx-auto">
             <Image
               src="/images/hero-me.webp"
               alt="my picture"
