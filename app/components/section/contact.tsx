@@ -14,7 +14,7 @@ export const Contact = () => {
           {t('contact')}
         </p>
         <div className="text-center mt-12">
-          <a href="mailto:kana.vc2341@gmail.com" className="inline-block btn">
+          <a href="mailto:kanataguchi23@gmail.com" className="inline-block btn">
             GET IN TOUCH
           </a>
         </div>
