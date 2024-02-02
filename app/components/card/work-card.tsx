@@ -21,6 +21,7 @@ export const WorkCard = ({ work }: WorkCardProps) => {
 
   const title = pathname === '/ja' ? work.title.ja : work.title.en
   const overview = pathname === '/ja' ? work.overview.ja : work.overview.en
+  const story = pathname === '/ja' ? work.story.ja : work.story.en
 
   const itemAnimation = {
     hidden: { opacity: 0, scale: 0.8 },
@@ -51,14 +52,7 @@ export const WorkCard = ({ work }: WorkCardProps) => {
           </p>
           <div className="flex gap-4 pt-4">
             {work.tech.slice(0, 3).map((item) => (
-              <Label
-                key={item}
-                text={item}
-                {...{
-                  width: { sp: 'w-fit', md: 'w-fit' },
-                  textSize: { sp: 'text-xs', md: 'text-sm' }
-                }}
-              />
+              <Label key={item} text={item} size={'xs'} />
             ))}
           </div>
         </div>
@@ -116,28 +110,31 @@ export const WorkCard = ({ work }: WorkCardProps) => {
                     <div className="flex flex-col gap-8 pt-8 md:px-3">
                       <div>
                         <h4 className="font-bold text-gray-100 mb-3 md:text-xl">
-                          OverView
+                          Overview
                         </h4>
                         <p className="text-sm text-gray-100 whitespace-pre-line md:text-base">
                           {overview}
                         </p>
                       </div>
+
                       <div>
                         <h4 className="font-bold text-gray-100 mb-3 md:text-xl">
                           Technology
                         </h4>
                         <div className="flex gap-4 flex-wrap">
                           {work.tech.map((item) => (
-                            <Label
-                              key={item}
-                              text={item}
-                              {...{
-                                width: { sp: 'w-fit', md: 'w-fit' },
-                                textSize: { sp: 'text-xs', md: 'text-base' }
-                              }}
-                            />
+                            <Label key={item} text={item} size={'sm'} />
                           ))}
                         </div>
+                      </div>
+
+                      <div>
+                        <h4 className="font-bold text-gray-100 mb-3 md:text-xl">
+                          Story
+                        </h4>
+                        <p className="text-sm text-gray-100 whitespace-pre-line md:text-base">
+                          {story}
+                        </p>
                       </div>
 
                       <div>
@@ -157,7 +154,7 @@ export const WorkCard = ({ work }: WorkCardProps) => {
                             {work.website}
                           </a>
                         ) : (
-                          <div>Upcoming...</div>
+                          <div>Upcoming soon!</div>
                         )}
                       </div>
 
@@ -168,20 +165,14 @@ export const WorkCard = ({ work }: WorkCardProps) => {
                           </span>
                           Github
                         </h4>
-                        {work.github ? (
-                          <a
-                            href={work.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-sm text-purple-50 underline md:text-base hover:opacity-70"
-                          >
-                            {work.github}
-                          </a>
-                        ) : (
-                          <div className="text-gray-100">
-                            Sorry, it&apos;s confidential
-                          </div>
-                        )}
+                        <a
+                          href={work.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm text-purple-50 underline md:text-base hover:opacity-70"
+                        >
+                          {work.github}
+                        </a>
                       </div>
                     </div>
                   </div>

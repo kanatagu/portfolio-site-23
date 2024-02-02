@@ -13,7 +13,7 @@ export const Hero = () => {
       <div className="flex items-center gap-6 justify-around lg:h-[538px]">
         <RevealAnimation>
           <div>
-            <span className="text-lg font-bold tracking-wide md:text-2xl">
+            <span className="text-lg font-bold tracking-wide md:text-3xl">
               Hello,
             </span>
             <h1 className="text-3xl font-bold tracking-wide md:pt-2 md:text-6xl">
