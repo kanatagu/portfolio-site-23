@@ -1,4 +1,4 @@
-import { SiGithub, SiLinkedin } from 'react-icons/si'
+import { SiGithub, SiLinkedin, SiDevdotto } from 'react-icons/si'
 
 export const Footer = () => {
   return (
@@ -16,12 +16,20 @@ export const Footer = () => {
           <SiLinkedin />
         </a>
         <a
-          href={'https://github.com/Kana-TAGUCHI'}
+          href={'https://github.com/kanatagu'}
           target="_blank"
           rel="noopener noreferrer"
           className="hover:opacity-70"
         >
           <SiGithub />
+        </a>
+        <a
+          href={'https://dev.to/kana'}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:opacity-70"
+        >
+          <SiDevdotto />
         </a>
       </div>
     </footer>

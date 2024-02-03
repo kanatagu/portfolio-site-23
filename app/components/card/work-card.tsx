@@ -154,7 +154,7 @@ export const WorkCard = ({ work }: WorkCardProps) => {
                             {work.website}
                           </a>
                         ) : (
-                          <div>Upcoming soon!</div>
+                          <div>Coming soon!</div>
                         )}
                       </div>
 

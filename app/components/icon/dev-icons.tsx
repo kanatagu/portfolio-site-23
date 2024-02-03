@@ -7,20 +7,12 @@ type DevIconsType = {
 export const DevIcons = ({ type }: DevIconsType) => {
   const frontEnd = [
     {
-      image: 'html5.svg',
-      text: 'HTML5'
-    },
-    {
-      image: 'css3.svg',
-      text: 'CSS3'
+      image: 'typescript.svg',
+      text: 'TypeScript'
     },
     {
       image: 'javascript.svg',
       text: 'JavaScript'
-    },
-    {
-      image: 'typescript.svg',
-      text: 'TypeScript'
     },
     {
       image: 'react.svg',
@@ -29,6 +21,14 @@ export const DevIcons = ({ type }: DevIconsType) => {
     {
       image: 'nextjs.svg',
       text: 'Next.js'
+    },
+    {
+      image: 'html5.svg',
+      text: 'HTML5'
+    },
+    {
+      image: 'css3.svg',
+      text: 'CSS3'
     },
     {
       image: 'sass.svg',

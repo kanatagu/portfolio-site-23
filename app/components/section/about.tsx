@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
-import { SiGithub, SiLinkedin } from 'react-icons/si'
+import { SiGithub, SiLinkedin, SiDevdotto } from 'react-icons/si'
 import { Label } from '@/components/label'
 import { SectionTitle } from '@/components/title'
 import { RevealAnimation } from '@/components/animation'
@@ -32,12 +32,20 @@ export const About = () => {
                 <SiLinkedin />
               </a>
               <a
-                href={'https://github.com/Kana-TAGUCHI'}
+                href={'https://github.com/kanatagu'}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:opacity-70"
               >
                 <SiGithub />
+              </a>
+              <a
+                href={'https://dev.to/kana'}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-70"
+              >
+                <SiDevdotto />
               </a>
             </div>
           </RevealAnimation>
