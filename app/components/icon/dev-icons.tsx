@@ -1,129 +1,220 @@
 import Image from 'next/image'
 
-type DevIconsType = {
-  type: 'frontEnd' | 'backEnd' | 'tool'
+import {
+  SiExpress,
+  SiTypescript,
+  SiJavascript,
+  SiReact,
+  SiNextdotjs,
+  SiRedux,
+  SiHtml5,
+  SiCss3,
+  SiSass,
+  SiChakraui,
+  SiTailwindcss,
+  SiReactquery,
+  SiApollographql,
+  SiJest,
+  SiAstro,
+  SiNodedotjs,
+  SiNestjs,
+  SiGraphql,
+  SiPostgresql,
+  SiMongodb,
+  SiPrisma,
+  SiGithub,
+  SiDocker,
+  SiFigma,
+  SiAdobexd,
+  SiSwagger,
+  SiPostman,
+  SiFirebase
+} from 'react-icons/si'
+import { SkillsType } from '@/types'
+
+export type DevIconsType = {
+  type: SkillsType
 }
 
 export const DevIcons = ({ type }: DevIconsType) => {
   const frontEnd = [
     {
-      image: 'typescript.svg',
-      text: 'TypeScript'
+      icon: <SiTypescript size="100%" />,
+      text: 'TypeScript',
+      url: 'https://www.typescriptlang.org/'
     },
     {
-      image: 'javascript.svg',
-      text: 'JavaScript'
+      icon: <SiJavascript size="100%" />,
+      text: 'JavaScript',
+      url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
     },
     {
-      image: 'react.svg',
-      text: 'React'
+      icon: <SiReact size="100%" />,
+      text: 'React',
+      url: 'https://react.dev/'
     },
     {
-      image: 'nextjs.svg',
-      text: 'Next.js'
+      icon: <SiNextdotjs size="100%" />,
+      text: 'Next.js',
+      url: 'https://nextjs.org/'
     },
     {
-      image: 'html5.svg',
-      text: 'HTML5'
+      icon: <SiRedux size="100%" />,
+      text: 'Redux',
+      url: 'https://redux.js.org/'
     },
     {
-      image: 'css3.svg',
-      text: 'CSS3'
+      icon: <SiReactquery size="100%" />,
+      text: 'React Query',
+      url: 'https://tanstack.com/query/latest'
     },
     {
-      image: 'sass.svg',
-      text: 'Sass'
+      icon: <SiApollographql size="100%" />,
+      text: 'Apollo Client',
+      url: 'https://www.apollographql.com/docs/react/'
     },
     {
-      image: 'chakraui.svg',
-      text: 'Chakra UI'
+      icon: <SiJest size="100%" />,
+      text: 'Jest',
+      url: 'https://jestjs.io/'
     },
     {
-      image: 'tailwindcss.svg',
-      text: 'Tailwind Css'
+      icon: <SiAstro size="100%" />,
+      text: 'Astro',
+      url: 'https://astro.build/'
+    },
+    {
+      icon: <SiHtml5 size="100%" />,
+      text: 'HTML5',
+      url: 'https://developer.mozilla.org/en-US/docs/Glossary/HTML5'
+    },
+    {
+      icon: <SiCss3 size="100%" />,
+      text: 'CSS3',
+      url: 'https://developer.mozilla.org/en-US/docs/Web/CSS'
+    },
+    {
+      icon: <SiSass size="100%" />,
+      text: 'Sass',
+      url: 'https://sass-lang.com/'
+    },
+    {
+      icon: <SiChakraui size="100%" />,
+      text: 'Chakra UI',
+      url: 'https://chakra-ui.com/'
+    },
+    {
+      icon: <SiTailwindcss size="100%" />,
+      text: 'Tailwind CSS',
+      url: 'https://tailwindcss.com/'
     }
   ]
 
   const backEnd = [
     {
-      image: 'nodejs.svg',
-      text: 'Node.js'
+      icon: <SiNodedotjs size="100%" />,
+      text: 'Node.js',
+      url: 'https://nodejs.org/en'
     },
     {
-      image: 'express.svg',
-      text: 'Express.js'
+      icon: <SiExpress size="100%" />,
+      text: 'Express.js',
+      url: 'https://expressjs.com/'
     },
     {
-      image: 'nestjs.svg',
-      text: 'Nest.js'
+      icon: <SiNestjs size="100%" />,
+      text: 'Nest.js',
+      url: 'https://nestjs.com/'
     },
     {
-      image: 'firebase.svg',
-      text: 'Firebase'
+      icon: <SiGraphql size="100%" />,
+      text: 'GraphQL',
+      url: 'https://graphql.org/'
     },
     {
-      image: 'mongodb.svg',
-      text: 'MongoDB'
+      icon: <SiPostgresql size="100%" />,
+      text: 'PostgreSQL',
+      url: 'https://www.postgresql.org/'
     },
     {
-      image: 'prisma.svg',
-      text: 'Prisma'
+      icon: <SiMongodb size="100%" />,
+      text: 'MongoDB',
+      url: 'https://www.mongodb.com/'
+    },
+    {
+      icon: <SiFirebase size="100%" />,
+      text: 'Firebase',
+      url: 'https://firebase.google.com/'
+    },
+    {
+      icon: <SiPrisma size="100%" />,
+      text: 'Prisma',
+      url: 'https://www.prisma.io/'
     }
   ]
 
-  const tool = [
+  const devTools = [
     {
-      image: 'github.svg',
-      text: 'Github'
+      icon: <SiGithub size="100%" />,
+      text: 'Github',
+      url: 'https://github.com/'
     },
     {
-      image: 'docker.svg',
-      text: 'Docker'
+      icon: <SiDocker size="100%" />,
+      text: 'Docker',
+      url: 'https://www.docker.com/'
     },
     {
-      image: 'figma.svg',
-      text: 'Figma'
+      icon: <SiSwagger size="100%" />,
+      text: 'Swagger',
+      url: 'https://swagger.io/'
     },
     {
-      image: 'xd.svg',
-      text: 'XD'
+      icon: <SiPostman size="100%" />,
+      text: 'Postman',
+      url: 'https://www.postman.com/'
+    },
+    {
+      icon: <SiFigma size="100%" />,
+      text: 'Figma',
+      url: 'https://www.figma.com/'
+    },
+    {
+      icon: <SiAdobexd size="100%" />,
+      text: 'XD',
+      url: 'https://helpx.adobe.com/'
     }
   ]
 
   const renderArray = (type: string) => {
     switch (type) {
-      case 'frontEnd':
+      case 'Front End':
         return frontEnd
-      case 'backEnd':
+      case 'Back End':
         return backEnd
-      case 'tool':
-        return tool
+      case 'Dev Tools':
+        return devTools
       default:
         return []
     }
   }
 
   return (
-    <ul className="flex gap-8 flex-wrap mt-4 max-w-[304px] md:max-w-none md:mt-5">
-      {renderArray(type).map((item) => (
-        <li
-          key={item.text}
-          className="group relative z-10 bg-gray-50 rounded-3xl px-2 py-2 cursor-pointer w-20 h-20 md:py-3 md:w-24 md:h-24 overflow-hidden before:content-[''] before:absolute before:top-0 before:-left-[160%] before:bg-gray-100 dark:before:bg-purple-50 before:w-[140%] before:h-full before:skew-x-[-25d] hover:before:animate-skew ease-out"
-        >
-          <div className="relative z-20 flex flex-col items-center justify-between h-full">
-            <Image
-              src={`/images/skills/${item.image}`}
-              alt={item.text}
-              width="80"
-              height="80"
-              className="h-10 w-10 md:w-12 md:h-12"
-            />
-            <span className="block text-purple-500 text-xs md:text-md group-hover:font-semibold dark:group-hover:text-gray-50">
-              {item.text}
-            </span>
-          </div>
-        </li>
-      ))}
-    </ul>
+    <div className="flex mt-1 bg-gray-50 dark:bg-gray-200 py-6 px-6 rounded flex-auto w-full">
+      <ul className="flex gap-4 flex-wrap content-start">
+        {renderArray(type).map((item) => (
+          <li key={item.text} className="group w-10 h-10 hover:animate-wiggle">
+            <a
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 dark:text-purple-500 group-hover:text-purple-50 dark:group-hover:text-purple-200"
+            >
+              {item.icon}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
   )
 }

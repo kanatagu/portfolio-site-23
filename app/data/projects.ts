@@ -1,4 +1,4 @@
-export type WorkType = {
+export type ProjectType = {
   id: number
   title: { en: string; ja: string }
   images: string[]
@@ -9,16 +9,16 @@ export type WorkType = {
   github: string
 }
 
-export const works: WorkType[] = [
+export const projects: ProjectType[] = [
   {
     id: 1,
     title: { en: 'Recipe App', ja: '料理レシピアプリ' },
     images: [
-      'work1-1.webp',
-      'work1-2.webp',
-      'work1-3.webp',
-      'work1-4.webp',
-      'work1-5.webp'
+      'project1-1.webp',
+      'project1-2.webp',
+      'project1-3.webp',
+      'project1-4.webp',
+      'project1-5.webp'
     ],
     overview: {
       en: 'This is a recipe app that you can search and save your favorite recipes. Also you can share with your recipe. I made this app with Next.js App router using server side components and actions.',
@@ -36,11 +36,11 @@ export const works: WorkType[] = [
     id: 2,
     title: { en: 'Dictionary App', ja: '英単語アプリ' },
     images: [
-      'work2-1.webp',
-      'work2-2.webp',
-      'work2-3.webp',
-      'work2-4.webp',
-      'work2-5.webp'
+      'project2-1.webp',
+      'project2-2.webp',
+      'project2-3.webp',
+      'project2-4.webp',
+      'project2-5.webp'
     ],
     overview: {
       en: 'This is your own dictionary app using Urban Dictionary API. You can search and save your own words list while you can add your memo and category. I made this app with React and Express.js.',
@@ -58,11 +58,11 @@ export const works: WorkType[] = [
     id: 3,
     title: { en: 'Tabi Memo', ja: 'Tabi Memo' },
     images: [
-      'work3-1.webp',
-      'work3-2.webp',
-      'work3-3.webp',
-      'work3-4.webp',
-      'work3-5.webp'
+      'project3-1.webp',
+      'project3-2.webp',
+      'project3-3.webp',
+      'project3-4.webp',
+      'project3-5.webp'
     ],
     overview: {
       en: 'This is a travel memo app called "Tabi Memo". You can schedule your trip and save your memo. This is a team project and we made this app with GraphQl, Apollo Client using TypeScript and Next.js.',
@@ -79,7 +79,7 @@ export const works: WorkType[] = [
   {
     id: 4,
     title: { en: 'Portfolio site', ja: 'ポートフォリオサイト' },
-    images: ['work4-1.webp', 'work4-2.webp'],
+    images: ['project4-1.webp', 'project4-2.webp'],
     overview: {
       en: 'This static website has feature of dark theme mode and multi language mode. I designed with Figma and made it with Next.js.',
       ja: 'こちらの静的サイトは、ダークモード機能と言語切り替えを追加しております。\nデザインはFigma、サイトはNext.jsで作りました。'
@@ -95,7 +95,7 @@ export const works: WorkType[] = [
   {
     id: 5,
     title: { en: 'Budget App', ja: '家計簿アプリ' },
-    images: ['work5-1.webp', 'work5-2.webp', 'work5-3.webp'],
+    images: ['project5-1.webp', 'project5-2.webp', 'project5-3.webp'],
     overview: {
       en: 'This is a budget app tha you can manage your income and expenses monthly. I made this app with React.js and Firebase. \n\n You can login using this test user. \nEmail: test@gmail.com \n Password: test1133',
       ja: 'React.jsとFirebaseを使用して作成した、毎月の収入と支出を管理する家計簿アプリです。\n\n 以下のテストユーザーでログインできます。 \nEmail: test@gmail.com \n Password: test1133'

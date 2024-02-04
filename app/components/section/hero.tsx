@@ -31,13 +31,13 @@ export const Hero = () => {
             <div className="pt-10 md:pt-16">
               <Link
                 className="inline-block btn-square"
-                to="work"
+                to="projects"
                 spy={true}
                 smooth={true}
                 offset={-120}
                 duration={650}
               >
-                VIEW MY WORKS
+                VIEW MY PROJECTS
               </Link>
             </div>
           </div>

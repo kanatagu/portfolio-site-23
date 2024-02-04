@@ -1,9 +1,9 @@
 {
   "Index": {
     "homeSubtitle": "Creative Web Developer",
-    "homeDescription": "Experiences with front-end, back-end and designing.",
-    "about": "<p>I have around three years of experience as a front-end engineer. I have also been expanding my skills by gaining experience in backend development and design to enhance my development skills. My passion is making meaningful and valuable web services and solving problems for a better world. I love <span>learning new things </span>and<span> expanding </span>my knowledge.</p><p>My web development journey began in 2020 when I self-learned HTML and CSS. Then, I gained experience as a front-end engineer, primarily focusing on <span>React</span>. Within a year, I was promoted to the <span>leadership team and division</span> in a first company. This involved tasks like <span>defining requirements and choosing appropriate technologies</span>.</p>",
-    "work": "Some things I've built for personal projects.\n Please click each projects to see more information.",
-    "contact": "I'm currently looking for a new opportunity.\n If you are interested in my skills or looking for a passionate, strong sense of responsibility developer, please feel free to contact me."
+    "homeDescription": "Experience in front-end, back-end development and UI/UX design",
+    "about": "<p>I have 3 years of experience as a front-end engineer, including leading a team development. Recently, to enhance my development skills, I have been gaining experience in backend and design positions. My passions are to make meaningful and valuable web services and to solve problems for a better world. I love <span>learning new things </span>and<span> expanding my knowledge</span>.</p><p>My web development journey began in 2020 when I self-learned HTML and CSS. Then I gained experience as a front-end engineer working for Relic Inc., where I focused on developing web applications with <span>React</span>. Within a year, I was promoted to the <span>leadership team</span> of an educational services project and front-end development division. This involved tasks like defining requirements and choosing appropriate technologies.</p>",
+    "projects": "Examples of personal projects I've developed and designed.\n Please click each project to see more information.",
+    "contact": "I'm currently looking for a new opportunity.\n Please feel free to contact me!"
   }
 }

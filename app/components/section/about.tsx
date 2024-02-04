@@ -10,7 +10,7 @@ export const About = () => {
   const t = useTranslations('Index')
 
   return (
-    <section className="mt-32 md:mt-60" id="about">
+    <section className="mt-32 md:mt-52" id="about">
       <SectionTitle title="ABOUT ME" />
       <div className="flex flex-col items-center mt-11 text-center justify-items-center md:flex-row md:justify-between md:text-left md:mt-14 flex-wrap">
         <div className="md:w-[42%]">
@@ -27,7 +27,7 @@ export const About = () => {
                 href={'https://www.linkedin.com/in/kana-taguchi/'}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:opacity-70"
+                className="hover:animate-wiggle"
               >
                 <SiLinkedin />
               </a>
@@ -35,7 +35,7 @@ export const About = () => {
                 href={'https://github.com/kanatagu'}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:opacity-70"
+                className="hover:animate-wiggle"
               >
                 <SiGithub />
               </a>
@@ -43,7 +43,7 @@ export const About = () => {
                 href={'https://dev.to/kana'}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:opacity-70"
+                className="hover:animate-wiggle"
               >
                 <SiDevdotto />
               </a>
@@ -61,12 +61,12 @@ export const About = () => {
             </div>
             <div className="mt-16 md:mt-12">
               <h3 className="font-bold text-2xl">Things I like</h3>
-              <div className="flex flex-wrap mt-4 gap-4 justify-center md:mt-8 md:gap-10 md:justify-start">
-                <Label text="WorkOut" />
-                <Label text="Learning" />
-                <Label text="Hiking" />
+              <div className="flex flex-wrap mt-4 gap-4 justify-center md:mt-8 md:gap-6 md:justify-start">
                 <Label text="Volleyball" />
-                <Label text="Movie" />
+                <Label text="Tennis" />
+                <Label text="Hiking" />
+                <Label text="Learning" />
+                <Label text="Movies" />
                 <Label text="Cooking" />
               </div>
             </div>

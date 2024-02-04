@@ -44,7 +44,7 @@ export const Header = () => {
           <ul className="flex flex-col gap-12 text-xl font-medium items-center pt-10 md:flex-row  md:justify-end md:pt-0 md:text-lg md:leading-none">
             <li>
               <ScrollLink
-                className="cursor-pointer hover:text-purple-100"
+                className="cursor-pointer hover:text-purple-200"
                 to="home"
                 spy={true}
                 smooth={true}
@@ -57,7 +57,7 @@ export const Header = () => {
             </li>
             <li>
               <ScrollLink
-                className="cursor-pointer hover:text-purple-100"
+                className="cursor-pointer hover:text-purple-200"
                 to="about"
                 spy={true}
                 smooth={true}
@@ -70,20 +70,20 @@ export const Header = () => {
             </li>
             <li>
               <ScrollLink
-                className="cursor-pointer hover:text-purple-100"
-                to="work"
+                className="cursor-pointer hover:text-purple-200"
+                to="projects"
                 spy={true}
                 smooth={true}
                 offset={-120}
                 duration={650}
                 onClick={() => setIsMenuOpen(false)}
               >
-                WORK
+                PROJECTS
               </ScrollLink>
             </li>
             <li>
               <ScrollLink
-                className="cursor-pointer hover:text-purple-100"
+                className="cursor-pointer hover:text-purple-200"
                 to="skills"
                 spy={true}
                 smooth={true}
@@ -96,7 +96,7 @@ export const Header = () => {
             </li>
             <li>
               <ScrollLink
-                className="cursor-pointer hover:text-purple-100"
+                className="cursor-pointer hover:text-purple-200"
                 to="contact"
                 spy={true}
                 smooth={true}
@@ -108,11 +108,11 @@ export const Header = () => {
               </ScrollLink>
             </li>
             <li>
-              <ThemeButton dropdownMenu />
+              <ThemeButton />
             </li>
             <li className="hidden md:block relative">
               <button
-                className="hover:text-purple-100"
+                className="hover:text-purple-200"
                 onClick={() => setIsLangSettingOpen(!isLangSettingOpen)}
               >
                 <BsTranslate size="32" />
