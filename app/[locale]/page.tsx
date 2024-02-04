@@ -2,7 +2,7 @@ import { Header, Footer } from '@/components/navigation'
 import { RevealAnimation } from '@/components/animation'
 import { Hero } from '@/components/section'
 import { About } from '@/components/section'
-import { Works } from '@/components/section'
+import { Projects } from '@/components/section'
 import { Skills } from '@/components/section'
 import { Contact } from '@/components/section'
 
@@ -15,7 +15,7 @@ export default function Home() {
           <Hero />
         </RevealAnimation>
         <About />
-        <Works />
+        <Projects />
         <Skills />
         <Contact />
       </main>

@@ -7,10 +7,10 @@ export const Contact = () => {
   const t = useTranslations('Index')
 
   return (
-    <section className="pt-32 md:pt-60" id="contact">
+    <section className="mt-32 md:mt-52" id="contact">
       <SectionTitle title="CONTACT" />
       <RevealAnimation>
-        <p className="mt-10 whitespace-pre-line md:text-xl md:text-center md:mt-14">
+        <p className="mt-10 whitespace-pre-line md:text-xl md:text-center md:mt-14 dark:text-gray-100">
           {t('contact')}
         </p>
         <div className="text-center mt-12">

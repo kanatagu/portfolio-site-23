@@ -2,18 +2,12 @@
 import { useTheme } from 'next-themes'
 import { MdOutlineLightMode, MdDarkMode } from 'react-icons/md'
 
-type ThemeButton = {
-  dropdownMenu?: boolean
-}
-
-export const ThemeButton = ({ dropdownMenu = false }: ThemeButton) => {
+export const ThemeButton = () => {
   const { theme, setTheme } = useTheme()
   return (
     <button
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-      className={`text-4xl hover:${
-        dropdownMenu ? 'text-purple-100' : 'text-purple-100'
-      }`}
+      className="text-4xl hover:text-purple-200"
     >
       {theme === 'dark' ? <MdOutlineLightMode /> : <MdDarkMode />}
     </button>

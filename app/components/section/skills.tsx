@@ -1,37 +1,29 @@
+'use client'
 import { SectionTitle } from '@/components/title'
 import { DevIcons } from '@/components/icon'
-import { RevealAnimation } from '@/components/animation'
+import { ItemContainerAnimation, ItemAnimation } from '@/components/animation'
+import { SkillsType } from '@/types'
 
 export const Skills = () => {
+  const category: SkillsType[] = ['Front End', 'Back End', 'Dev Tools']
+
   return (
-    <section className="mt-32 md:mt-60" id="skills">
+    <section className="mt-32 md:mt-52" id="skills">
       <SectionTitle title="MY SKILLS" />
-      <div className="flex flex-col gap-11 items-center mt-11 text-center md:items-start md:text-left md:gap-16 md:mt-14">
-        <div>
-          <RevealAnimation>
-            <h3 className="font-bold text-xl text-purple-400 dark:text-purple-50">
-              Front End
+
+      <ItemContainerAnimation className="flex flex-col md:flex-row gap-12 mt-11 md:mt-14">
+        {category.map((type) => (
+          <ItemAnimation
+            key={type}
+            className="flex flex-col w-full md:w-[calc(100%/3)] items-start flex-auto"
+          >
+            <h3 className="font-bold text-xl text-purple-200 dark:text-purple-50">
+              {type}
             </h3>
-            <DevIcons type="frontEnd" />
-          </RevealAnimation>
-        </div>
-        <div>
-          <RevealAnimation>
-            <h3 className="font-bold text-xl text-purple-400 dark:text-purple-50">
-              Back End
-            </h3>
-            <DevIcons type="backEnd" />
-          </RevealAnimation>
-        </div>
-        <div>
-          <RevealAnimation>
-            <h3 className="font-bold text-xl text-purple-400 dark:text-purple-50">
-              Tools
-            </h3>
-            <DevIcons type="tool" />
-          </RevealAnimation>
-        </div>
-      </div>
+            <DevIcons type={type} />
+          </ItemAnimation>
+        ))}
+      </ItemContainerAnimation>
     </section>
   )
 }
