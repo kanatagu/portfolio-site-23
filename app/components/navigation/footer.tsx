@@ -1,4 +1,4 @@
-import { SiGithub, SiLinkedin, SiDevdotto } from 'react-icons/si'
+import { SiGithub, SiLinkedin, SiDevdotto, SiQiita } from 'react-icons/si'
 import { MdCopyright } from 'react-icons/md'
 
 export const Footer = () => {
@@ -8,7 +8,7 @@ export const Footer = () => {
         <MdCopyright size="16" />
         Copyright 2023. Created by by Kana
       </div>
-      <div className="flex justify-between text-2xl font-bold w-1/4 md:text-3xl md:w-40">
+      <div className="flex justify-between text-2xl font-bold w-1/2 md:text-3xl md:w-52">
         <a
           href={'https://www.linkedin.com/in/kana-taguchi/'}
           target="_blank"
@@ -32,6 +32,14 @@ export const Footer = () => {
           className="hover:animate-wiggle"
         >
           <SiDevdotto />
+        </a>
+        <a
+          href={'https://qiita.com/kana-wwib'}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:animate-wiggle"
+        >
+          <SiQiita />
         </a>
       </div>
     </footer>
