@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
-import { SiGithub, SiLinkedin, SiDevdotto } from 'react-icons/si'
+import { SiGithub, SiLinkedin, SiDevdotto, SiQiita } from 'react-icons/si'
 import { Label } from '@/components/label'
 import { SectionTitle } from '@/components/title'
 import { RevealAnimation } from '@/components/animation'
@@ -22,7 +22,7 @@ export const About = () => {
               height="600"
               className="md:w-4/5 mx-auto h-auto"
             />
-            <div className="flex justify-center gap-20 text-2xl font-bold mt-8 md:text-4xl md:mt-14">
+            <div className="flex justify-center gap-16 text-2xl font-bold mt-8 md:text-4xl md:mt-14">
               <a
                 href={'https://www.linkedin.com/in/kana-taguchi/'}
                 target="_blank"
@@ -46,6 +46,14 @@ export const About = () => {
                 className="hover:animate-wiggle"
               >
                 <SiDevdotto />
+              </a>
+              <a
+                href={'https://qiita.com/kana-wwib'}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:animate-wiggle"
+              >
+                <SiQiita />
               </a>
             </div>
           </RevealAnimation>
