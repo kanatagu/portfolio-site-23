@@ -1,3 +1,5 @@
+import { Analytics } from '@vercel/analytics/react'
+
 import { Metadata } from 'next'
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -47,7 +49,10 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <body className={`${poppins.variable} ${raleway.variable}`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <ThemeProvider>{children}</ThemeProvider>
+          <ThemeProvider>
+            {children}
+            <Analytics />
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>
