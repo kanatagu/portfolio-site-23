@@ -37,7 +37,7 @@ export const Header = () => {
         </button>
 
         <nav
-          className={`flex justify-center absolute top-20 transition-all duration-500 h-screen w-full bg-purple-50 dark:bg-purple-500 md:static md:h-full md:justify-end md:items-center md:bg-transparent md:dark:bg-transparent ${
+          className={`flex justify-center absolute top-20 transition-all duration-500 h-screen w-full overflow-y-auto bg-purple-50 dark:bg-purple-500 md:static md:h-full md:justify-end md:items-center md:bg-transparent md:dark:bg-transparent ${
             isMenuOpen ? 'right-0' : '-right-full'
           }`}
         >

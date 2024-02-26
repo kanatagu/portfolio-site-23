@@ -14,7 +14,7 @@ export const Projects = () => {
       <p className="mt-10 whitespace-pre-line md:text-xl md:text-center md:mt-14 dark:text-gray-100">
         {t('projects')}
       </p>
-      <ItemContainerAnimation className="mt-10 flex flex-col flex-wrap gap-4 items-center justify-center md:flex-row md:mt-14 md:gap-7">
+      <ItemContainerAnimation className="mt-10 flex flex-col flex-wrap gap-4 items-center justify-center md:flex-row md:mt-14 md:gap-12">
         {projects.map((project) => (
           <ProjectCard project={project} key={project.id} />
         ))}

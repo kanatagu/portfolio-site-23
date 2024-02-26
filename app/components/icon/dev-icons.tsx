@@ -137,6 +137,11 @@ export const DevIcons = ({ type }: DevIconsType) => {
       url: 'https://www.postgresql.org/'
     },
     {
+      icon: <SiPrisma size="100%" />,
+      text: 'Prisma',
+      url: 'https://www.prisma.io/'
+    },
+    {
       icon: <SiMongodb size="100%" />,
       text: 'MongoDB',
       url: 'https://www.mongodb.com/'
@@ -145,11 +150,6 @@ export const DevIcons = ({ type }: DevIconsType) => {
       icon: <SiFirebase size="100%" />,
       text: 'Firebase',
       url: 'https://firebase.google.com/'
-    },
-    {
-      icon: <SiPrisma size="100%" />,
-      text: 'Prisma',
-      url: 'https://www.prisma.io/'
     }
   ]
 
