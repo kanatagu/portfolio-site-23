@@ -70,12 +70,12 @@ export const About = () => {
             <div className="mt-16 md:mt-12">
               <h3 className="font-bold text-2xl">Things I like</h3>
               <div className="flex flex-wrap mt-4 gap-4 justify-center md:mt-8 md:gap-6 md:justify-start">
-                <Label text="Volleyball" />
-                <Label text="Tennis" />
-                <Label text="Hiking" />
-                <Label text="Learning" />
-                <Label text="Movies" />
-                <Label text="Cooking" />
+                <Label text="Volleyball" w="w-24 md:w-36" />
+                <Label text="Tennis" w="w-24 md:w-36" />
+                <Label text="Hiking" w="w-24 md:w-36" />
+                <Label text="Learning" w="w-24 md:w-36" />
+                <Label text="Movies" w="w-24 md:w-36" />
+                <Label text="Cooking" w="w-24 md:w-36" />
               </div>
             </div>
           </RevealAnimation>
