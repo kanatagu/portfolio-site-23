@@ -40,13 +40,13 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
               height="227"
               className="object-cover object-top h-full rounded-t-lg group-hover/item:opacity-30"
             />
-            <div className="opacity-0 absolute inset-0 flex flex-col items-center justify-center text-xl text-gray-200 transition-all duration-500 ease-in-out group-hover/item:opacity-100">
+            <div className="opacity-0 absolute inset-0 flex flex-col items-center justify-center text-xl text-gray-100 transition-all duration-500 ease-in-out group-hover/item:opacity-100">
               See Details
             </div>
           </div>
           <div className="px-4 py-5 bg-purple-400 dark:bg-purple-500 opacity-80">
-            <h3 className="text-gray-50 text-xl font-bold">{title}</h3>
-            <p className="text-gray-50 dark:text-gray-100 pt-2 text-sm line-clamp-2">
+            <h3 className="text-gray-50 text-xl font-medium">{title}</h3>
+            <p className="text-gray-100 dark:text-gray-100 pt-2 text-sm line-clamp-2">
               {overview}
             </p>
             <div className="flex gap-4 pt-4">
@@ -57,6 +57,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
                   size={'xs'}
                   bgColorLight="bg-purple-200"
                   bgColorDark="bg-gray-300"
+                  fontWeight={'font-medium'}
                 />
               ))}
             </div>
