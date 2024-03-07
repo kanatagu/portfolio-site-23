@@ -37,11 +37,11 @@ export const Header = () => {
         </button>
 
         <nav
-          className={`flex justify-center absolute top-20 transition-all duration-500 h-screen w-ful bg-purple-50 dark:bg-purple-500 md:static md:h-full md:justify-end md:items-center md:bg-transparent md:dark:bg-transparent ${
+          className={`flex justify-center absolute top-20 transition-all duration-500 h-[calc(100svh-80px)] w-ful bg-purple-50 dark:bg-purple-500 md:static md:h-full md:justify-end md:items-center md:bg-transparent md:dark:bg-transparent ${
             isMenuOpen ? 'right-0' : '-right-full'
           }`}
         >
-          <ul className="flex flex-col gap-12 text-xl font-medium items-center pt-10 md:flex-row  md:justify-end md:pt-0 md:text-lg md:leading-none">
+          <ul className="flex flex-col gap-12 text-xl font-medium items-center py-4 overflow-y-auto w-screen md:min-h-full md:w-full md:flex-row md:justify-end md:py-0 md:text-lg md:leading-none">
             <li>
               <ScrollLink
                 className="cursor-pointer hover:text-purple-200"

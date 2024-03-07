@@ -35,10 +35,10 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           <div className="relative h-56 rounded-t-lg bg-black">
             <Image
               src={`/images/projects/${project.images[0]}`}
-              alt="K"
-              width="340"
-              height="227"
-              className="object-cover object-top h-full rounded-t-lg group-hover/item:opacity-30"
+              alt={`${title} project`}
+              width={340}
+              height={227}
+              className="object-cover object-top h-full w-[340px] rounded-t-lg group-hover/item:opacity-30"
             />
             <div className="opacity-0 absolute inset-0 flex flex-col items-center justify-center text-xl text-gray-100 transition-all duration-500 ease-in-out group-hover/item:opacity-100">
               See Details

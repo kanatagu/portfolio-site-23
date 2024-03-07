@@ -49,6 +49,7 @@ export const Hero = () => {
               alt="my picture"
               width="798"
               height="1081"
+              priority
               className="rounded-full w-full h-auto border-4 border-purple-50 shadow-lg shadow-purple-50"
             />
           </div>
