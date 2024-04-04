@@ -41,7 +41,7 @@ export const Header = () => {
             isMenuOpen ? 'right-0' : '-right-full'
           }`}
         >
-          <ul className="flex flex-col gap-12 text-xl font-medium items-center py-4 overflow-y-auto w-screen md:min-h-full md:w-full md:flex-row md:justify-end md:py-0 md:text-lg md:leading-none">
+          <ul className="flex flex-col gap-12 text-xl font-medium items-center py-4 overflow-y-auto w-screen md:overflow-y-visible md:min-h-full md:w-full md:flex-row md:justify-end md:py-0 md:text-lg md:leading-none">
             <li>
               <ScrollLink
                 className="cursor-pointer hover:text-purple-200"
@@ -123,14 +123,14 @@ export const Header = () => {
                     <Link
                       href="/"
                       locale="en"
-                      className="border-2 rounded-sm p-2 text-center hover:opacity-50"
+                      className="border-2 rounded-sm p-2 text-center hover:opacity-70"
                     >
                       English
                     </Link>
                     <Link
                       href="/"
                       locale="ja"
-                      className="border-2 rounded-sm p-2 text-center hover:opacity-50"
+                      className="border-2 rounded-sm p-2 text-center hover:opacity-70"
                     >
                       Japanese
                     </Link>
