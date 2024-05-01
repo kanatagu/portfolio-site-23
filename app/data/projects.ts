@@ -41,13 +41,31 @@ export const projects: ProjectType[] = [
   },
   {
     id: 3,
-    title: { en: 'Dictionary App', ja: '英単語アプリ' },
+    title: { en: 'FairyShare', ja: 'FairyShare' },
     images: [
       'project3-1.webp',
       'project3-2.webp',
       'project3-3.webp',
       'project3-4.webp',
       'project3-5.webp'
+    ],
+    overview: {
+      en: 'FairyShare is share house management app. You can manage house chore, rules, and expenses with your housemates. This is a team project and I led the team to develop smoothly while creating tasks and documents. I provided guidance on the implementation approach for features and reviewed all the code to ensure quality and consistency. We used NestJs, PostgreSQL and wrote end to end tests with Jest for server side. For client side, we used React.js, TypeScript, React Query and TailwindCSS. \n\n You can log in with the following test account. \nEmail: felip@example.com \n Password: password',
+      ja: 'FairyShareはシェアハウス管理アプリです。ルールや家事、費用をルームメイトと共有することができます。こちらはチームプロジェクトで、リードエンドエンジニアとして参画し、メンバーがスムーズに開発できるようにタスクやドキュメントを作成しました。機能の実装方法についてアドバイスをし、品質と一貫性を確保するためにすべてのコードをレビューを実施しました。サーバーサイドではNestJs、PostgreSQLを使用し、Jestを使用してE2Eテストを書きました。クライアントサイドではReact.js、TypeScript、React Query、TailwindCSSを使用しました。\n\n 以下のテストユーザーでログインできます。 \nEmail: felip@example.com \n Password: password'
+    },
+    tech: ['NestJS', 'TypeScript', 'React', 'PostgreSQL', 'TailwindCSS'],
+    website: 'https://fairyshare.xyz/',
+    github: 'https://github.com/HAK2024/fairy-share'
+  },
+  {
+    id: 4,
+    title: { en: 'Dictionary App', ja: '英単語アプリ' },
+    images: [
+      'project4-1.webp',
+      'project4-2.webp',
+      'project4-3.webp',
+      'project4-4.webp',
+      'project4-5.webp'
     ],
     overview: {
       en: 'This app is your own dictionary app using Urban Dictionary API. You can search and save your word list while adding your memo and category. I created this app using React, Express.js, and TypeScript. Currently, I am working on MongoDB to store data and planning to deploy it soon.',
@@ -58,27 +76,27 @@ export const projects: ProjectType[] = [
     github: 'https://github.com/kanatagu/dictionary-app'
   },
   {
-    id: 4,
+    id: 5,
     title: { en: 'Tabi Memo', ja: 'Tabi Memo' },
     images: [
-      'project4-1.webp',
-      'project4-2.webp',
-      'project4-3.webp',
-      'project4-4.webp',
-      'project4-5.webp'
+      'project5-1.webp',
+      'project5-2.webp',
+      'project5-3.webp',
+      'project5-4.webp',
+      'project5-5.webp'
     ],
     overview: {
-      en: 'This is a travel memo app called "Tabi Memo". You can schedule your trip and save your memo with both a light and dark mode theme. This is a team project and we created this app with GraphQl, Apollo Client using TypeScript and Next.js. First, I made this service wireframe and designed some pages with Figma to gather people. I picked three other developers and started making this app in Nov 2023. My role was leading members to develop smoothly while creating tasks, arranging meetings, designing, and front-end and back-end development. \n Currently, we are working on the final stage of the app and planning to deploy in March 2024.',
-      ja: '「Tabi Memo」という旅行メモアプリで、旅行のスケジュールを立てたり、メモを保存することができます。こちらはチームプロジェクトで、GraphQl、Apollo Client、TypeScript、Next.jsを使用して作りました。初めに、ワイヤーフレームとコアとなるページのデザインをFigmaで作成し、メンバーを集めました。2023年11月に開発を開始し、私は主にメンバーをリードしながら、タスクの作成、ミーティングの手配、デザイン、フロントエンド、バックエンドの開発をしています。\n\n 現在はアプリの最終段階に取り組んでおり、2024年3月にデプロイする予定です。'
+      en: 'This is a travel memo app called "Tabi Memo". You can schedule your trip and save your memo with both a light and dark mode theme. This is a team project and we created this app with GraphQl, Apollo Client using TypeScript and Next.js. First, I made this service wireframe and designed some pages with Figma to gather people. I picked three other developers and started making this app in Nov 2023. My role was leading members to develop smoothly while creating tasks, arranging meetings, designing, and front-end and back-end development. \n\n You can log in with the following test account. \nEmail: gezigeziawawa@gmail.com \n Password: password',
+      ja: '「Tabi Memo」という旅行メモアプリで、旅行のスケジュールを立てたり、メモを保存することができます。こちらはチームプロジェクトで、GraphQl、Apollo Client、TypeScript、Next.jsを使用して作りました。初めに、ワイヤーフレームとコアとなるページのデザインをFigmaで作成し、メンバーを集めました。2023年11月に開発を開始し、私は主にメンバーをリードしながら、タスクの作成、ミーティングの手配、デザイン、フロントエンド、バックエンドの開発をしています。\n\n 以下のテストユーザーでログインできます。 \nEmail: gezigeziawawa@gmail.com \n Password: password'
     },
     tech: ['GraphQl', 'Supabase', 'Next.js', 'Apollo Client', 'Figma'],
-    website: null,
+    website: 'https://tabi-memo.vercel.app/',
     github: 'https://github.com/orgs/tabi-memo/repositories'
   },
   {
-    id: 5,
+    id: 6,
     title: { en: 'Portfolio site', ja: 'ポートフォリオサイト' },
-    images: ['project5-1.webp', 'project5-2.webp'],
+    images: ['project6-1.webp', 'project6-2.webp'],
     overview: {
       en: 'This static website has the feature of dark theme mode using the next-theme library and multi-language mode with next-intl. I learned how to use Figma and basic design rules and made this site with Next.js.',
       ja: 'こちらの静的サイトは、Next-themeを使用したダークモード機能とNext-intlライブラリを使用した言語切り替えを追加しております。\n Figmaの使い方と基本的なデザインルールを学びながら、Next.jsで作成しました。'
@@ -86,18 +104,5 @@ export const projects: ProjectType[] = [
     tech: ['Next.js', 'TailwindCSS', 'Figma', 'TypeScript'],
     website: 'https://www.kanataguchi.com/',
     github: 'https://github.com/Kana-TAGUCHI/portfolio-site-23'
-  },
-  {
-    id: 6,
-    title: { en: 'Budget App', ja: '家計簿アプリ' },
-    images: ['project6-1.webp', 'project6-2.webp', 'project6-3.webp'],
-    overview: {
-      en: 'This is a budget app that you can manage your income and expenses monthly. I made this app to learn React.js for the first time in 2021 with Firebase. There are many places I need to refactor, but this is a memorable app that I made before becoming a front-end developer. \n\n You can log in with the following test account. \nEmail: test@gmail.com \n Password: test1133',
-      ja: 'React.jsとFirebaseを使用して作成した、毎月の収入と支出を管理する家計簿アプリです。2021年にReact.jsを初めて学ぶために作成しました。最初のアプリなのでリファクタすべき箇所がたくさんありますが、フロントエンドエンジニアになる前に作成した思い出深いアプリです。 \n\n 以下のテストユーザーでログインできます。 \nEmail: test@gmail.com \n Password: test1133'
-    },
-    tech: ['React.js', 'Firebase', 'CSS'],
-
-    website: 'https://my-budget-app-fc01e.web.app/',
-    github: 'https://github.com/Kana-TAGUCHI/My-budget-app'
   }
 ]
